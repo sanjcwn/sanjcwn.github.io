@@ -158,6 +158,245 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网工第二章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/">网工第二章</a>
+    </h1>
+  
+
+        
+        <a href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2023-04-30T18:12:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第二章-通信基础"><a href="#第二章-通信基础" class="headerlink" title="第二章 通信基础"></a>第二章 通信基础</h1><h2 id="2-1-考点分析"><a href="#2-1-考点分析" class="headerlink" title="2-1 考点分析"></a>2-1 考点分析</h2><p>本章可能是<strong>最难</strong>的章节，1.偏理论，日常工作用不上2.公式记不住，记住了又忘3.听得懂，但一做题就废</p>
+<p>​	方法：做题+重复</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301917625.png" alt="image-20230430191656439"></p>
+<h2 id="2-2-信道特性"><a href="#2-2-信道特性" class="headerlink" title="2-2 信道特性"></a>2-2 信道特性</h2><h3 id="2-2-1-数据通信概念"><a href="#2-2-1-数据通信概念" class="headerlink" title="2-2.1 数据通信概念"></a>2-2.1 数据通信概念</h3><p>通信的目的就是<strong>传递信息</strong></p>
+<p>通信中产生和发送信息的一端叫信源，接收信息的一端叫信宿，信源与信宿之间的<strong>通信线路称为信道</strong>。</p>
+<p><strong><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301920314.png" alt="image-20230430192056187"></strong></p>
+<p>信号主要有两种信号：模拟信号和数字信号。</p>
+<img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301921349.png" alt="image-20230430192134238" style="zoom:50%;" />
+
+<h3 id="2-2-2-信道特性–信道带宽"><a href="#2-2-2-信道特性–信道带宽" class="headerlink" title="2-2.2 信道特性–信道带宽"></a>2-2.2 信道特性–信道带宽</h3><p>信道带宽<strong>W</strong></p>
+<p>​	模拟信道：<strong>W&#x3D;f2-f1</strong>（f2和f1分别表示：信道能通过的最高&#x2F;最低频率，Hz）。</p>
+<p>​	数字信道：数字信道是离散信道，带宽为信道能达到的<strong>最大数据传输速率</strong>，bit&#x2F;s。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301924569.png" alt="image-20230430192426481"></p>
+<h3 id="2-2-3-信道特性–码元与码元速率"><a href="#2-2-3-信道特性–码元与码元速率" class="headerlink" title="2-2.3 信道特性–码元与码元速率"></a>2-2.3 信道特性–码元与码元速率</h3><p>码元：一个数字脉冲称作为一个码元（可理解为<strong>时钟周期的信号</strong>）。</p>
+<p>码元速率：单位时间内信道传送的码元个数。如果<strong>码元宽度</strong>（脉冲周期）为T，则码元速率（波特率）为<strong>B&#x3D;1&#x2F;T</strong>，单位是<strong>波特Baud</strong>。</p>
+<p>一个码元携带信息量n（位）与码元种类数（N）的关系<strong>n&#x3D;log2N。</strong></p>
+<h3 id="2-2-4-信道特性–奈奎斯特定理（核心公式）"><a href="#2-2-4-信道特性–奈奎斯特定理（核心公式）" class="headerlink" title="2-2.4 信道特性–奈奎斯特定理（核心公式）"></a>2-2.4 信道特性–奈奎斯特定理（核心公式）</h3><p>​	奈奎斯特定理：在一个理想的（没有噪声环境）信道中，若<strong>信道宽度为W</strong>，最大<strong>码元速率</strong>为<strong>B&#x3D;2W（Baud）</strong></p>
+<p>​	极限数据速率为<strong>R&#x3D;Blog2N&#x3D;2Wlog2N</strong>（N表示码元种类数）（60%-70%可能会考）</p>
+<p>数据速率&#x3D;码元速率*每个码元所携带信息量</p>
+<h3 id="2-2-5-信道特性–香农定理"><a href="#2-2-5-信道特性–香农定理" class="headerlink" title="2-2.5 信道特性–香农定理"></a>2-2.5 信道特性–香农定理</h3><p>香农定理：在一个<strong>噪声信道</strong>的极限数据速率与带宽之间的关系。</p>
+<p>极限速率公式：<strong>C&#x3D;W*log2(1+S&#x2F;N)</strong></p>
+<p>分贝与信噪比关系：<strong>dB&#x3D;10*log10S&#x2F;N</strong></p>
+<p>其中<strong>W为带宽，S为信号平均功率，N为噪声平均功率，S&#x2F;N为信噪比</strong>。</p>
+<p><strong>带宽&#x2F;码元速率&#x2F;数据速率关系梳理</strong>：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301943001.png"></p>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301947714.png" alt="image-20230430194754560"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010213793.png" alt="image-20230430195037719"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301956866.png" alt="image-20230430195658715"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301958184.png" alt="image-20230430195810076"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304301958721.png" alt="image-20230430195834578"></p>
+<h2 id="2-3-信道延迟"><a href="#2-3-信道延迟" class="headerlink" title="2-3 信道延迟"></a>2-3 信道延迟</h2><p>建议考试时遇见信道延迟的计算，放在最后来做。网工计算题一般不超过3、4道。</p>
+<h3 id="2-3-1-信道延迟"><a href="#2-3-1-信道延迟" class="headerlink" title="2-3.1 信道延迟"></a>2-3.1 信道延迟</h3><p>信道延迟：与<strong>源端及宿距离</strong>有关，也与<strong>信道中信号传播速率</strong>有关。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302007048.png" alt="image-20230430200727960"></p>
+<p>线路延迟&#x3D;<strong>传输距离&#x2F;传输速度</strong>(路上跑的时间)</p>
+<p>发送延迟&#x3D;<strong>数据帧大小&#x2F;速率</strong>(排队上车的时间)</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302008880.png" alt="image-20230430200826767"></p>
+<p>注：注意单位</p>
+<h3 id="2-3-2-信道延迟计算"><a href="#2-3-2-信道延迟计算" class="headerlink" title="2-3.2 信道延迟计算"></a>2-3.2 信道延迟计算</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302010449.png" alt="image-20230430201036260"></p>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302018300.png" alt="image-20230430201800134"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302022528.png" alt="image-20230430202250412"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302027057.png" alt="image-20230430202720895"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302031971.png" alt="image-20230430203138870"></p>
+<h2 id="2-4-传输介质"><a href="#2-4-传输介质" class="headerlink" title="2-4 传输介质"></a>2-4 传输介质</h2><h3 id="2-4-1传输介质概念"><a href="#2-4-1传输介质概念" class="headerlink" title="2-4.1传输介质概念"></a>2-4.1传输介质概念</h3><p>两个终端，用一条能承载数据传输的传输介质连接起来，就形成了一个最简单的网络。</p>
+<p>有线传输介质：<strong>同轴电缆、双绞线、光纤</strong>等。</p>
+<p>无线传输介质：<strong>无线电波、微波、红外线、激光</strong>等。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302034677.png" alt="image-20230430203408477"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302036350.png" alt="image-20230430203646216"></p>
+<h4 id="练习题-2"><a href="#练习题-2" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302038159.png" alt="image-20230430203807029"></p>
+<h3 id="2-4-2-双绞线"><a href="#2-4-2-双绞线" class="headerlink" title="2-4.2 双绞线"></a>2-4.2 双绞线</h3><p><strong>由多对绝缘同导线两两相互缠绕而成</strong></p>
+<p>缠绕马奴棣：降低信号干扰的程度。</p>
+<p>数据传输100M–用到四根，2对（1、2、3、6）</p>
+<p>数据传输1000M–使用8根（全部使用）</p>
+<h4 id="双绞线规格"><a href="#双绞线规格" class="headerlink" title="双绞线规格"></a><strong>双绞线规格</strong></h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302042418.png" alt="image-20230430204244286"></p>
+<p>注：网线传输距离为100米</p>
+<h4 id="双绞线分类"><a href="#双绞线分类" class="headerlink" title="双绞线分类"></a>双绞线分类</h4><p>非屏蔽双绞线（UTP）：</p>
+<p>绝缘套管中无屏蔽层，价格低廉、应用广泛，主要用于<strong>企业、教育</strong></p>
+<p>屏蔽双绞线（STP）：</p>
+<p>绝缘套管中外层由铝箔包裹，以减小辐射及干扰，价格相对较高，高要求场合应用，一般用于<strong>军队政府、医疗、航空航天（高精密场景）</strong></p>
+<h3 id="2-4-3-光纤"><a href="#2-4-3-光纤" class="headerlink" title="2-4.3  光纤"></a>2-4.3  光纤</h3><h4 id="光纤概述"><a href="#光纤概述" class="headerlink" title="光纤概述"></a>光纤概述</h4><p>光纤：利用光在<strong>玻璃或塑料纤维</strong>中的全反射原理而达成的光传到工具</p>
+<p>光在光纤中传导损耗很低，适合用作长距离信息传递</p>
+<p>光纤特点：<strong>重量轻，体积小，传输远（衰弱小），容量大，抗电磁干扰</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302051012.png" alt="image-20230430205114938"></p>
+<p>光缆：光缆一般由多根光纤和塑料保护套管及塑料外皮构成。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302052633.png" alt="image-20230430205209533"></p>
+<h4 id="光纤分类"><a href="#光纤分类" class="headerlink" title="光纤分类"></a>光纤分类</h4><p>单模光纤：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302053069.png" alt="image-20230430205305955"></p>
+<p>多模光纤：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302053262.png" alt="image-20230430205322155"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302053914.png" alt="image-20230430205332817"></p>
+<p>单模多模光纤对比：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302054359.png" alt="image-20230430205418175"></p>
+<p>光接口与光模块：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302056766.png" alt="image-20230430205614524"></p>
+<p>光模块一般有双芯和单芯的。</p>
+<p>光纤连接器：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302059493.png" alt="image-20230430205935317"></p>
+<p>跳线与尾纤</p>
+<p>双绞线跳线：带水晶头的网线</p>
+<p>光纤跳线：带有连接器与保护层的光纤</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302101627.png" alt="image-20230430210130429"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302101978.png" alt="image-20230430210156858"></p>
+<p>光纤手工接头也可以，但是损耗较大，所以一般使用熔纤。</p>
+<h4 id="练习题-3"><a href="#练习题-3" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302105740.png" alt="image-20230430210515573"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302106487.png" alt="image-20230430210623320"></p>
+<h2 id="2-5-数据编码"><a href="#2-5-数据编码" class="headerlink" title="2.5 数据编码"></a>2.5 数据编码</h2><h3 id="2-5-1曼彻斯特编码（高频考点）"><a href="#2-5-1曼彻斯特编码（高频考点）" class="headerlink" title="2-5.1曼彻斯特编码（高频考点）"></a>2-5.1曼彻斯特编码（高频考点）</h3><p>曼彻斯特编码是一种双向码，在每个比特中间均有一个跳变，<strong>第一个编码自定义</strong>，假如下图有高电平向低电平跳代表“0”，反之代表“1”</p>
+<p>一般用在以太网</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302140750.png" alt="image-20230430214011622"></p>
+<h3 id="2-5-2差分曼彻斯特编码"><a href="#2-5-2差分曼彻斯特编码" class="headerlink" title="2-5.2差分曼彻斯特编码"></a>2-5.2差分曼彻斯特编码</h3><p>差分曼彻斯特编码也是一种双向码，用在令牌环网中</p>
+<p>有跳变代表“0”，无跳变代表“1”，<strong>有0无1</strong>；</p>
+<p>跳变比的是<strong>前一个编码的结束电平和下一个编码的起始电平</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302142588.png" alt="image-20230430214201441"></p>
+<h3 id="2-5-3两种曼彻斯特编码特点"><a href="#2-5-3两种曼彻斯特编码特点" class="headerlink" title="2-5.3两种曼彻斯特编码特点"></a>2-5.3两种曼彻斯特编码特点</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302144436.png" alt="image-20230430214410282"></p>
+<h3 id="2-5-4-其他编码"><a href="#2-5-4-其他编码" class="headerlink" title="2-5.4 其他编码"></a>2-5.4 其他编码</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302146750.png" alt="image-20230430214627554"></p>
+<h4 id="练习题-4"><a href="#练习题-4" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302148753.png" alt="image-20230430214830571"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302149073.png" alt="image-20230430214941972"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302151787.png" alt="image-20230430215145623"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302152439.png" alt="image-20230430215243289"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302156217.png" alt="image-20230430215653931"></p>
+<h2 id="2-6-调制技术"><a href="#2-6-调制技术" class="headerlink" title="2-6 调制技术"></a>2-6 调制技术</h2><h3 id="2-6-1-调制技术定义"><a href="#2-6-1-调制技术定义" class="headerlink" title="2-6.1 调制技术定义"></a>2-6.1 调制技术定义</h3><p>​	数字数据不仅可以用脉冲传输，也可以用模拟信号传输。用数字数据调制模拟信号叫做数字调制。</p>
+<p>​	<strong>幅度键控（ASK）</strong>：用载波的两个不同振幅表示0和1。</p>
+<p>​	<strong>频移键控（FSK）</strong>：用载波的两个不同频率表示0和1。</p>
+<p>​	<strong>相移键控（PSK）</strong>：用载波的起始相位的变化表示0和1。</p>
+<p>​	<strong>正交幅度调制（QAM）</strong>：把两个<strong>幅度相同但相位相差90度</strong>的模拟信号合成一个模拟信号。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302203900.png" alt="image-20230430220322590"></p>
+<h4 id="练习题-5"><a href="#练习题-5" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302205531.png" alt="image-20230430220558250"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302210286.png" alt="image-20230430221022019"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302211161.png" alt="image-20230430221138982"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302212965.png" alt="image-20230430221240771"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302213787.png" alt="image-20230430221317600"></p>
+<h2 id="2-7-脉冲调制PCM（高频考点）"><a href="#2-7-脉冲调制PCM（高频考点）" class="headerlink" title="2-7 脉冲调制PCM（高频考点）"></a>2-7 脉冲调制PCM（高频考点）</h2><h3 id="2-7-1-脉冲调制概念"><a href="#2-7-1-脉冲调制概念" class="headerlink" title="2-7.1 脉冲调制概念"></a>2-7.1 脉冲调制概念</h3><p>常用数字化技术就是脉冲编码调制技术（PCM），简称脉码调制。</p>
+<p>PCM数字化过程3个步骤：<strong>采样、量化和编码</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302239342.png" alt="image-20230430223928026"></p>
+<h3 id="2-7-2-PCM计算"><a href="#2-7-2-PCM计算" class="headerlink" title="2-7.2 PCM计算"></a>2-7.2 PCM计算</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302241301.png" alt="image-20230430224120050"></p>
+<h4 id="练习题-6"><a href="#练习题-6" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302244866.png" alt="image-20230430224424666"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302247510.png" alt="image-20230430224742301"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302248597.png" alt="image-20230430224817415"></p>
+<h2 id="2-8-通信和交换方式"><a href="#2-8-通信和交换方式" class="headerlink" title="2-8 通信和交换方式"></a>2-8 通信和交换方式</h2><h3 id="2-8-1-数据通信方式"><a href="#2-8-1-数据通信方式" class="headerlink" title="2-8.1 数据通信方式"></a>2-8.1 数据通信方式</h3><p>按通信方向分：</p>
+<p><strong>单工通信</strong>：信息只能在一个方向传送，发送方不能接收，接收方不能发送（电视&#x2F;广播）</p>
+<p><strong>半双工通信</strong>：通信的双方可以交替发送和接收信息，但不能同时接收或发送（对讲机&#x2F;WIFI&#x2F;<strong>Hub</strong>）</p>
+<p><strong>全双工通信</strong>：通信双方可同时进行双向的信息传送（电话&#x2F;<strong>交换机</strong>）</p>
+<p>按同步方式分：</p>
+<p><strong>异步传输和同步传输</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302253253.png" alt="image-20230430225300954"></p>
+<h4 id="练习题-7"><a href="#练习题-7" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302255039.png" alt="image-20230430225515808"></p>
+<h3 id="2-8-2-数据交换方式"><a href="#2-8-2-数据交换方式" class="headerlink" title="2-8.2 数据交换方式"></a>2-8.2 数据交换方式</h3><p><strong>电路交换、报文交换和分组交换</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302256719.png" alt="image-20230430225600583"></p>
+<p>分组交换优势：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202304302256652.png" alt="image-20230430225620495"></p>
+<h2 id="2-9-数字传输系统E1-x2F-T1（）"><a href="#2-9-数字传输系统E1-x2F-T1（）" class="headerlink" title="2-9 数字传输系统E1&#x2F;T1（）"></a>2-9 数字传输系统E1&#x2F;T1（）</h2><h3 id="2-9-1-多路复用技术"><a href="#2-9-1-多路复用技术" class="headerlink" title="2-9.1 多路复用技术"></a>2-9.1 多路复用技术</h3><p>多路复用技术是把<strong>多个低速的信道组合成一个告诉的信道的技术。</strong></p>
+<p>光纤入户：上网、电视、电话。</p>
+<p>这种技术要用到两个设备：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010126500.png" alt="image-20230501012610266"></p>
+<h3 id="2-9-2-各种复用技术"><a href="#2-9-2-各种复用技术" class="headerlink" title="2-9.2 各种复用技术"></a>2-9.2 各种复用技术</h3><p>频分复用：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010127292.png" alt="image-20230501012743129"></p>
+<p>时分复用：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010128274.png" alt="image-20230501012805163"></p>
+<p>波分复用：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010128614.png" alt="image-20230501012844507"></p>
+<h3 id="2-9-3-E1和T1"><a href="#2-9-3-E1和T1" class="headerlink" title="2-9.3 E1和T1"></a>2-9.3 E1和T1</h3><p>就是用来传电话传语音的。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010130080.png" alt="image-20230501013034876"></p>
+<p><strong>T1&#x3D;64K*24+开销与间隔&#x3D;1.544M</strong></p>
+<p><strong>E1&#x3D;64*30+64K</strong>2&#x3D;2.048M**</p>
+<p>同步数字序列</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010133821.png" alt="image-20230501013310642"></p>
+<h4 id="练习题-8"><a href="#练习题-8" class="headerlink" title="练习题"></a><strong>练习题</strong></h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010134391.png" alt="image-20230501013423235"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010134725.png" alt="image-20230501013457565"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010135141.png" alt="image-20230501013524986"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010135511.png" alt="image-20230501013534357"></p>
+<h2 id="2-10-海明纠错码"><a href="#2-10-海明纠错码" class="headerlink" title="2-10 海明纠错码"></a>2-10 海明纠错码</h2><h3 id="2-10-1-差错控制"><a href="#2-10-1-差错控制" class="headerlink" title="2-10.1 差错控制"></a>2-10.1 差错控制</h3><p>数据传输中出现错误不可避免，因此需要采用差错控制方法。数据通信中常用的方法是<strong>检错</strong>和<strong>纠错</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010137240.png" alt="image-20230501013715130"></p>
+<p>差错控制原理：传输k位，加入r位冗余（某种算法定义），接收方收到进行计算比较。</p>
+<h3 id="2-10-2-奇偶校验"><a href="#2-10-2-奇偶校验" class="headerlink" title="2-10.2 奇偶校验"></a>2-10.2 奇偶校验</h3><p>奇偶校验是最常用的检错方法，能检出一位错位</p>
+<p>原理：在7位ASCII码后增加一位的个数（奇校验）或偶数（偶校验）</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010140960.png" alt="image-20230501014023844"></p>
+<h3 id="2-10-3-海明码"><a href="#2-10-3-海明码" class="headerlink" title="2-10.3 海明码"></a>2-10.3 海明码</h3><p>海明（Hamming）码是通冗余数据位来<strong>检测和纠正差错</strong>的编码方式。</p>
+<p>海明距离（码距）：<strong>一个码字要变成另一个码字时必须改变的最小位数。两个码字之间不同的比特数</strong>。</p>
+<h4 id="练习题-9"><a href="#练习题-9" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010145320.png" alt="image-20230501014559177"></p>
+<h3 id="2-10-4-海明码原理"><a href="#2-10-4-海明码原理" class="headerlink" title="2-10.4 海明码原理"></a>2-10.4 海明码原理</h3><p>原理：在数据中加入几个校验码，码距均匀拉大，当某一位出错，就会引起几个校验位的值发生变化。</p>
+<p>海明不等式：<strong>2的k次方-1&gt;m+k</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010147408.png" alt="image-20230501014754224"></p>
+<h3 id="2-10-5-海明码编码"><a href="#2-10-5-海明码编码" class="headerlink" title="2-10.5 海明码编码"></a>2-10.5 海明码编码</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010148983.png" alt="image-20230501014832833"></p>
+<p>2的i次方位为校验位，其余位存放数据。</p>
+<p>校验位与数据位的关系很重要。</p>
+<h4 id="练习题-10"><a href="#练习题-10" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010156156.png" alt="image-20230501015559977"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010200728.png" alt="image-20230501020024540"></p>
+<h2 id="2-11-CRC循环冗余码"><a href="#2-11-CRC循环冗余码" class="headerlink" title="2-11 CRC循环冗余码"></a>2-11 CRC循环冗余码</h2><p>掌握计算方法</p>
+<h3 id="2-11-1-CRC冗余校验码"><a href="#2-11-1-CRC冗余校验码" class="headerlink" title="2-11.1 CRC冗余校验码"></a>2-11.1 CRC冗余校验码</h3><p>末尾加入CRC冗余校验码<strong>能检错不能纠错</strong>，广泛用于网络通信和磁盘存储。</p>
+<p>例题：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010202380.png" alt="image-20230501020231179"></p>
+<p>1.判断校验位数：生成多项式的最高次方是几，校验码就是几位。</p>
+<p>2.补起数据位后面的0</p>
+<p>3.提生成多项式的系数</p>
+<p>4.用第二步的结果，除以第三步的结果（异或运算）</p>
+<h4 id="练习题-11"><a href="#练习题-11" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010206431.png" alt="image-20230501020623278"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010207637.png" alt="image-20230501020734467"></p>
+<h2 id="章节总结"><a href="#章节总结" class="headerlink" title="章节总结"></a>章节总结</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010209239.png" alt="image-20230501020926979"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010210886.png" alt="image-20230501021043702"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-网工第一章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

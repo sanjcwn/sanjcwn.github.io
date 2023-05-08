@@ -6,17 +6,146 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.sanjcwn.io">
-  <title>Archives: 2023 | sanj的个人博客</title>
+  <title>网工第六章 | sanj的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sanj的个人博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sanj的个人博客">
-<meta property="og:url" content="http://github.sanjcwn.io/archives/2023/index.html">
+  <meta name="description" content="第六章 网络互连与互联网（最核心最重要）考点分析 6-1 互联网（上下午都会涉及）6-1.1 网络互联设备总结非常重要  6-1.2 中继器与集线器6-1.2.1 网络演进历史 中继器只有两个接口，接口不够用就诞生了集线器。   6-1.2.2 集线器工作原理 两个集线器连接起来形成环路。 会造成广播风暴，影响通信效率。 会造成数据扩散，严重威胁网络安全。  6-1.3 网桥和交换机6-1.3.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网工第六章">
+<meta property="og:url" content="http://github.sanjcwn.io/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/index.html">
 <meta property="og:site_name" content="sanj的个人博客">
-<meta property="og:description" content="sanj的个人博客网站">
+<meta property="og:description" content="第六章 网络互连与互联网（最核心最重要）考点分析 6-1 互联网（上下午都会涉及）6-1.1 网络互联设备总结非常重要  6-1.2 中继器与集线器6-1.2.1 网络演进历史 中继器只有两个接口，接口不够用就诞生了集线器。   6-1.2.2 集线器工作原理 两个集线器连接起来形成环路。 会造成广播风暴，影响通信效率。 会造成数据扩散，严重威胁网络安全。  6-1.3 网桥和交换机6-1.3.1">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090124886.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070019477.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070023714.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070024183.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070024908.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070025847.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070026520.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070036602.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070038076.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070039039.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070041178.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070043230.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070045521.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070046965.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070048985.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070050759.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070053031.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070057953.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070101219.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070102286.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070103627.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070105078.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070106843.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070110119.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070114066.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070116556.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070118936.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070119450.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305072116172.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080005315.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080005188.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080006342.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080008184.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080012524.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080014164.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080016144.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080017400.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080018564.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080020263.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080023231.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080024704.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080024176.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080025987.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080026178.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080027503.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080028092.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080029309.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080031527.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080031209.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080032425.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080043355.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080044946.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080046480.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080047218.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080051235.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080051509.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080053384.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080054026.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080055072.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082112125.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082114967.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082118155.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082119689.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082120801.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082121714.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082121204.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082123539.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082128268.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082130812.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082134771.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082139219.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082144959.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082148462.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082153155.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082153345.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082154493.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082155139.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082158450.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082202814.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082210082.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082211890.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082212953.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082213799.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082213404.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082213327.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090029638.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090030578.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090031590.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090032427.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090034776.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090035124.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090036153.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090038671.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090039783.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090040881.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090042375.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090044344.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090046838.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090048659.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090051174.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090052861.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090052197.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090053599.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090053086.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090055500.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090056803.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090058615.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090059987.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090100480.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090101142.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090102438.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090103141.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090104858.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090104047.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090106050.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090106119.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090106875.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090107992.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090108493.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090109187.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090109170.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090112417.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090116039.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090119112.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090121788.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090121938.png">
+<meta property="article:published_time" content="2023-05-08T17:23:23.000Z">
+<meta property="article:modified_time" content="2023-05-08T17:24:36.927Z">
 <meta property="article:author" content="sanj">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090124886.png">
   
     <link rel="alternative" href="/atom.xml" title="sanj的个人博客" type="application/atom+xml">
   
@@ -156,184 +285,379 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-网工第六章" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      网工第六章
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/" class="archive-article-date">
+
+        
+        <a href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/" class="archive-article-date">
   	<time datetime="2023-05-08T17:23:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/">网工第六章</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第六章-网络互连与互联网（最核心最重要）"><a href="#第六章-网络互连与互联网（最核心最重要）" class="headerlink" title="第六章 网络互连与互联网（最核心最重要）"></a>第六章 网络互连与互联网（最核心最重要）</h1><h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090124886.png" alt="image-20230506004150604"></p>
+<h2 id="6-1-互联网（上下午都会涉及）"><a href="#6-1-互联网（上下午都会涉及）" class="headerlink" title="6-1 互联网（上下午都会涉及）"></a>6-1 互联网（上下午都会涉及）</h2><h3 id="6-1-1-网络互联设备总结"><a href="#6-1-1-网络互联设备总结" class="headerlink" title="6-1.1 网络互联设备总结"></a>6-1.1 网络互联设备总结</h3><p><strong>非常重要</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070019477.png" alt="image-20230507001945083"></p>
+<h3 id="6-1-2-中继器与集线器"><a href="#6-1-2-中继器与集线器" class="headerlink" title="6-1.2 中继器与集线器"></a>6-1.2 中继器与集线器</h3><h4 id="6-1-2-1-网络演进历史"><a href="#6-1-2-1-网络演进历史" class="headerlink" title="6-1.2.1 网络演进历史"></a>6-1.2.1 <strong>网络演进历史</strong></h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070023714.png" alt="image-20230507002347436"></p>
+<p>中继器只有两个接口，接口不够用就诞生了集线器。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070024183.png" alt="image-20230507002441957"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070024908.png" alt="image-20230507002455658"></p>
+<h4 id="6-1-2-2-集线器工作原理"><a href="#6-1-2-2-集线器工作原理" class="headerlink" title="6-1.2.2 集线器工作原理"></a>6-1.2.2 集线器工作原理</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070025847.png" alt="image-20230507002550633"></p>
+<p>两个集线器连接起来形成环路。</p>
+<p><strong>会造成广播风暴，影响通信效率。</strong></p>
+<p><strong>会造成数据扩散，严重威胁网络安全。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070026520.png" alt="image-20230507002654223"></p>
+<h3 id="6-1-3-网桥和交换机"><a href="#6-1-3-网桥和交换机" class="headerlink" title="6-1.3 网桥和交换机"></a>6-1.3 网桥和交换机</h3><h4 id="6-1-3-1-划时代的设备：交换机"><a href="#6-1-3-1-划时代的设备：交换机" class="headerlink" title="6-1.3.1 划时代的设备：交换机"></a>6-1.3.1 划时代的设备：交换机</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070036602.png" alt="image-20230507003621436"></p>
+<p>交换机会构建数据交换专用通道</p>
+<h4 id="6-1-3-2-交换机工作原理"><a href="#6-1-3-2-交换机工作原理" class="headerlink" title="6-1.3.2 交换机工作原理"></a>6-1.3.2 交换机工作原理</h4><p>用的最多的就是二层以太网交换机。</p>
+<p><strong>交换机的寻址</strong></p>
+<p>1.初始情况下，交换机MAC地址表是空的。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070038076.png" alt="image-20230507003819872"></p>
+<p>MAC地址表很重要。</p>
+<p>2.PC1发送一个数据帧给PC4，假设PC1已知道PC4的MAC地址。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070039039.png" alt="image-20230507003957906"></p>
+<p>3.交换机在说到数据帧后，将数据帧中的<strong>源MAC</strong></p>
+<p><strong>地址学习到MAC表中</strong>，并于接收该帧的接口GE0&#x2F;0&#x2F;1口关联。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070041178.png" alt="image-20230507004127022"></p>
+<p>4.交换机在MAC地址表中查询数据帧的目的MAC地址，发现没有匹配的表项，因此将数据帧从除了其入站接口之外的所有接口<strong>泛洪</strong>出去。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070043230.png" alt="image-20230507004319050"></p>
+<p>5.PC2及PC3收到数据帧后将其丢弃，因为这些数据帧并非发送给自己；PC4则收下数据帧，现在PC4要回复数据给PC1。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070045521.png" alt="image-20230507004500372"></p>
+<p>6.PC4封装回复包，发给PC1。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070046965.png" alt="image-20230507004619817"></p>
+<p>7.交换机收到了PC4的数据帧，将帧头的源MAC地址学习到MAC表中，并与接口GE0&#x2F;0&#x2F;4关联。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070048985.png" alt="image-20230507004836817"></p>
+<p>8.交换机在MAC表中查找数据帧的<strong>目的MAC地址</strong>，发现有一个匹配的表项，出接口是GE0&#x2F;0&#x2F;1，于是将数据帧转发到GE0&#x2F;0&#x2F;1中。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070050759.png" alt="image-20230507005025610"></p>
+<p>核心原理：<strong>基于源MAC地址的学习，基于目的MAC地址的转发。</strong></p>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070053031.png" alt="image-20230507005303839"></p>
+<p>典型的DOS拒绝服务攻击。</p>
+<h3 id="6-1-4-路由器与三层交换机"><a href="#6-1-4-路由器与三层交换机" class="headerlink" title="6-1.4 路由器与三层交换机"></a>6-1.4 路由器与三层交换机</h3><p>典型的三层设备：路由器、三层交换机、防火墙…</p>
+<h4 id="6-1-4-1-路由器"><a href="#6-1-4-1-路由器" class="headerlink" title="6-1.4.1 路由器"></a>6-1.4.1 路由器</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070057953.png" alt="image-20230507005740833"></p>
+<p>例如port5和port8要通信就需要路由器。若要让port5与port6不能通信，就采取VLAN隔离。</p>
+<h4 id="6-1-4-2-三层交换机"><a href="#6-1-4-2-三层交换机" class="headerlink" title="6-1.4.2 三层交换机"></a>6-1.4.2 三层交换机</h4><p>本质就是路由器和交换机的结合体。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070101219.png" alt="image-20230507010111057"></p>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070102286.png" alt="image-20230507010259110"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070103627.png" alt="image-20230507010339490"></p>
+<h4 id="6-1-4-3-路由器与三层交换机的区别"><a href="#6-1-4-3-路由器与三层交换机的区别" class="headerlink" title="6-1.4.3 路由器与三层交换机的区别"></a>6-1.4.3 路由器与三层交换机的区别</h4><p><strong>典型园区网拓扑结构</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070105078.png" alt="image-20230507010459887"></p>
+<p>区别1：应用场景不一样，因此造成它的功能、性能、成本等会不一样。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070106843.png" alt="image-20230507010611654"></p>
+<p><strong>路由器与三层交换机对比：</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070110119.png" alt="image-20230507011054898"></p>
+<h3 id="6-1-5-网关设备与多层交换机"><a href="#6-1-5-网关设备与多层交换机" class="headerlink" title="6-1.5 网关设备与多层交换机"></a>6-1.5 网关设备与多层交换机</h3><h4 id="6-1-5-1-网关"><a href="#6-1-5-1-网关" class="headerlink" title="6-1.5.1 网关"></a>6-1.5.1 网关</h4><p>网关是互连网络操作在OSI传输层之上的设施</p>
+<p>主要功能：1.连接网络层之上执行<strong>不同协议的子网</strong>，组成异构型的互联网。</p>
+<p>2.网关能对互不兼容的<strong>高层协议进行转换</strong>。</p>
+<p>3.为了实现异构型设备之间的通信，网关要对不同传输层、会话层、表示层、应用层协议进行<strong>翻译和转换</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070114066.png" alt="image-20230507011425906"></p>
+<h4 id="6-1-5-2-多层交换机-x2F-多业务交换机"><a href="#6-1-5-2-多层交换机-x2F-多业务交换机" class="headerlink" title="6-1.5.2 多层交换机&#x2F;多业务交换机"></a>6-1.5.2 多层交换机&#x2F;多业务交换机</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070116556.png" alt="image-20230507011651367"></p>
+<h4 id="6-1-5-3-SDN可编程交换机"><a href="#6-1-5-3-SDN可编程交换机" class="headerlink" title="6-1.5.3 SDN可编程交换机"></a>6-1.5.3 SDN可编程交换机</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070118936.png" alt="image-20230507011840760"></p>
+<h5 id="6-1-5-4-网络演进总结"><a href="#6-1-5-4-网络演进总结" class="headerlink" title="6-1.5.4 网络演进总结"></a>6-1.5.4 网络演进总结</h5><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305070119450.png" alt="image-20230507011953300"></p>
+<h2 id="6-2-网络层协议IP和ICMP"><a href="#6-2-网络层协议IP和ICMP" class="headerlink" title="6-2 网络层协议IP和ICMP"></a>6-2 网络层协议IP和ICMP</h2><h3 id="6-2-1-IP报文格式"><a href="#6-2-1-IP报文格式" class="headerlink" title="6-2.1 IP报文格式"></a>6-2.1 IP报文格式</h3><p>需要花时间去记</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305072116172.png" alt="image-20230507211615859"></p>
+<p>头部长度（IHL）：最小值是5，最大值是15，单位4字节。</p>
+<p>TOS：为区分服务字段，用区分服务类型，即QOS字段。</p>
+<p>总字段长度：IPV4数据报的总长度。</p>
+<p>标识：主机发送ip报文的序号，每发送一次+1。</p>
+<p><strong>生存期（TTL）</strong>：用于设置一个数据包<strong>可经过的路由器数量的上限，每经过一台路由器减1。</strong></p>
+<p><strong>协议字段：</strong>包含一个数字，标识数据报有效载荷部分的数据类型。<strong>最常用的值为1（ICMP）17（UDP）和6（TCP）</strong>。</p>
+<p>头部校验和：仅计算IPV4头部，不检查数据有效载荷部分的正确性。放TTL减1时，头部校验和必须重新计算。  </p>
+<h4 id="练习题-2"><a href="#练习题-2" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080005315.png" alt="image-20230508000500105"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080005188.png" alt="image-20230508000532994"></p>
+<h3 id="6-2-2-IP分片定义"><a href="#6-2-2-IP分片定义" class="headerlink" title="6-2.2 IP分片定义"></a>6-2.2 IP分片定义</h3><p>IP报文醉倒65535字节，而以太网MTU为1500字节。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080006342.png" alt="image-20230508000648135"></p>
+<h4 id="6-2-2-1-例题精选解析"><a href="#6-2-2-1-例题精选解析" class="headerlink" title="6-2.2.1 例题精选解析"></a>6-2.2.1 例题精选解析</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080008184.png" alt="image-20230508000801839"></p>
+<p>注意以数据去计算。除以8是以八字节为单位。</p>
+<h4 id="练习题-3"><a href="#练习题-3" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080012524.png" alt="image-20230508001234263"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080014164.png" alt="image-20230508001409863"></p>
+<p>如果不能被8整除，要选一个能被8的整除的最大的数。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080016144.png" alt="image-20230508001603861"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080017400.png" alt="image-20230508001731068"></p>
+<h3 id="6-2-3-IP分类与特殊IP地址"><a href="#6-2-3-IP分类与特殊IP地址" class="headerlink" title="6-2.3 IP分类与特殊IP地址"></a>6-2.3 IP分类与特殊IP地址</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080018564.png" alt="image-20230508001823287"></p>
+<p>实际中，ABC最广。</p>
+<p><strong>特殊IPv4地址</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080020263.png" alt="image-20230508002008951"></p>
+<h4 id="练习题-4"><a href="#练习题-4" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080023231.png" alt="image-20230508002308002"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080024704.png" alt="image-20230508002400470"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080024176.png" alt="image-20230508002435849"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080025987.png" alt="image-20230508002508817"></p>
+<h3 id="6-2-4-ARP与RARP协议"><a href="#6-2-4-ARP与RARP协议" class="headerlink" title="6-2.4 ARP与RARP协议"></a>6-2.4 ARP与RARP协议</h3><h4 id="6-2-4-1-为什么需要ARP"><a href="#6-2-4-1-为什么需要ARP" class="headerlink" title="6-2.4.1 为什么需要ARP"></a>6-2.4.1 为什么需要ARP</h4><p>数据链路层在进行数据封装是，需要目的MAC地址。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080026178.png" alt="image-20230508002646915"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080027503.png" alt="image-20230508002702309"></p>
+<p>主机A发送数据包给主机C之前，首先通过<strong>ARP协议根据IP地址获取主机MAC地址</strong>。</p>
+<p>ARP表：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080028092.png" alt="image-20230508002853921"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080029309.png" alt="image-20230508002958120"></p>
+<p><strong>ARP请求</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080031527.png" alt="image-20230508003104316"></p>
+<p>两个ARP目的MAC地址不一样。</p>
+<p>ARP发过来后会先更新arp的数据缓存，</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080031209.png" alt="image-20230508003152967"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080032425.png" alt="image-20230508003221189"></p>
+<h4 id="6-2-4-2-ARP地址解析五步曲"><a href="#6-2-4-2-ARP地址解析五步曲" class="headerlink" title="6-2.4.2 ARP地址解析五步曲"></a>6-2.4.2 ARP地址解析五步曲</h4><p>1.先查ARP表。</p>
+<p>2.请求IP地址对应的MAC地址。</p>
+<p>3.主机B更新ARP表。</p>
+<p>4.主机B返回。</p>
+<p>5.主机A更新ARP表。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080043355.png" alt="image-20230508004321078"></p>
+<h4 id="6-2-4-3-代理ARP"><a href="#6-2-4-3-代理ARP" class="headerlink" title="6-2.4.3 代理ARP"></a>6-2.4.3 代理ARP</h4><p><strong>同一网段、不同物理网络上</strong>的计算机之间，可以通过ARP代理实现相互通信。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080044946.png" alt="image-20230508004450781"></p>
+<h4 id="练习题-5"><a href="#练习题-5" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080046480.png" alt="image-20230508004656313"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080047218.png" alt="image-20230508004724038"></p>
+<h3 id="6-2-5-ICMP协议"><a href="#6-2-5-ICMP协议" class="headerlink" title="6-2.5 ICMP协议"></a>6-2.5 ICMP协议</h3><p>ICMP（Internet控制报文协议），<strong>协议号为1</strong>，封装在IP报文中，用来<strong>传递差错、控制、查询</strong>等信息，典型应用<strong>ping&#x2F;tracert依赖ICMP报文</strong>。</p>
+<h4 id="6-2-5-1-ICMP报文类型与代码"><a href="#6-2-5-1-ICMP报文类型与代码" class="headerlink" title="6-2.5.1 ICMP报文类型与代码"></a>6-2.5.1 ICMP报文类型与代码</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080051235.png" alt="image-20230508005101019"></p>
+<h4 id="6-2-5-1-ICMP应用-tracert"><a href="#6-2-5-1-ICMP应用-tracert" class="headerlink" title="6-2.5.1 ICMP应用-tracert"></a>6-2.5.1 ICMP应用-tracert</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080051509.png" alt="image-20230508005136296"></p>
+<h4 id="练习题-6"><a href="#练习题-6" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080053384.png" alt="image-20230508005323224"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080054026.png" alt="image-20230508005422857"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305080055072.png" alt="image-20230508005528813"></p>
+<h2 id="6-3-传输层封装协议TCP和UDP"><a href="#6-3-传输层封装协议TCP和UDP" class="headerlink" title="6-3 传输层封装协议TCP和UDP"></a>6-3 传输层封装协议TCP和UDP</h2><h3 id="6-3-1-TCP和UDP报文格式"><a href="#6-3-1-TCP和UDP报文格式" class="headerlink" title="6-3.1 TCP和UDP报文格式"></a>6-3.1 TCP和UDP报文格式</h3><p><strong>整体对比</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082112125.png" alt="image-20230508211200908"></p>
+<h4 id="6-3-1-1-TCP报文格式"><a href="#6-3-1-1-TCP报文格式" class="headerlink" title="6-3.1.1 TCP报文格式"></a>6-3.1.1 TCP报文格式</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082114967.png" alt="image-20230508211426779"></p>
+<h4 id="6-3-1-2-TCP伪首部"><a href="#6-3-1-2-TCP伪首部" class="headerlink" title="6-3.1.2 TCP伪首部"></a>6-3.1.2 TCP伪首部</h4><p>TCP伪首部本质是IP头部的一部分，包含源目<strong>IP地址，协议号、TCP报头和用户数据</strong>，主要用于<strong>TCP校验和计算。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082118155.png" alt="image-20230508211855045"></p>
+<h4 id="6-3-1-3-UDP报文格式"><a href="#6-3-1-3-UDP报文格式" class="headerlink" title="6-3.1.3 UDP报文格式"></a>6-3.1.3 UDP报文格式</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082119689.png" alt="image-20230508211949558"></p>
+<h4 id="练习题-7"><a href="#练习题-7" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082120801.png" alt="image-20230508212033658"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082121714.png" alt="image-20230508212120586"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082121204.png" alt="image-20230508212139996"></p>
+<h3 id="6-3-2-TCP三次握手（绝对重点）"><a href="#6-3-2-TCP三次握手（绝对重点）" class="headerlink" title="6-3.2 TCP三次握手（绝对重点）"></a>6-3.2 TCP三次握手（绝对重点）</h3><h4 id="6-3-2-1-TCP三次握手建立连接"><a href="#6-3-2-1-TCP三次握手建立连接" class="headerlink" title="6-3.2.1 TCP三次握手建立连接"></a>6-3.2.1 TCP三次握手建立连接</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082123539.png" alt="image-20230508212347403"></p>
+<p>ACK确认收到。在TCP报头中，第一个SYN包里的ACK为0，其他的都为1。</p>
+<p>小写的ack两层意思：确认收到和请求再次发送。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082128268.png" alt="image-20230508212815969"></p>
+<h4 id="6-3-2-2-TCP四次挥手断开连接"><a href="#6-3-2-2-TCP四次挥手断开连接" class="headerlink" title="6-3.2.2 TCP四次挥手断开连接"></a>6-3.2.2 TCP四次挥手断开连接</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082130812.png" alt="image-20230508213004609"></p>
+<h4 id="练习题-8"><a href="#练习题-8" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082134771.png" alt="image-20230508213428463"></p>
+<h3 id="6-3-3-流量控制和拥塞控制"><a href="#6-3-3-流量控制和拥塞控制" class="headerlink" title="6-3.3 流量控制和拥塞控制"></a>6-3.3 流量控制和拥塞控制</h3><h4 id="6-3-3-1-TCP流量控制"><a href="#6-3-3-1-TCP流量控制" class="headerlink" title="6-3.3.1 TCP流量控制"></a>6-3.3.1 TCP流量控制</h4><p>流量控制：为了防止<strong>发送方发送速度过快</strong>，导致接收方处理不过来，造成丢包重传，浪费网络资源。</p>
+<p>TCP流量控制机制：<strong>可变大小的滑动窗口</strong>。</p>
+<h4 id="6-3-3-2-TCP滑动窗口机制"><a href="#6-3-3-2-TCP滑动窗口机制" class="headerlink" title="6-3.3.2 TCP滑动窗口机制"></a>6-3.3.2 TCP滑动窗口机制</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082139219.png" alt="image-20230508213941006"></p>
+<h4 id="6-3-3-3-TCP拥塞控制"><a href="#6-3-3-3-TCP拥塞控制" class="headerlink" title="6-3.3.3 TCP拥塞控制"></a>6-3.3.3 TCP拥塞控制</h4><p>有了流量控制可以调节发送端和接收端的节奏，为什么还要拥塞控制？</p>
+<p><strong>流量控制</strong>：在AB两个端点进行。</p>
+<p><strong>拥塞控制</strong>：在AB和所有网络节点中进行。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082144959.png" alt="image-20230508214440823"></p>
+<h4 id="6-3-3-4-TCP拥塞控制"><a href="#6-3-3-4-TCP拥塞控制" class="headerlink" title="6-3.3.4 TCP拥塞控制"></a>6-3.3.4 TCP拥塞控制</h4><p>TCP慢启动和拥塞避免算法的实现</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082148462.png" alt="image-20230508214817166"></p>
+<p>拐点叫门限值。</p>
+<h4 id="练习题-9"><a href="#练习题-9" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082153155.png" alt="image-20230508215300005"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082153345.png" alt="image-20230508215321180"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082154493.png" alt="image-20230508215413292"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082155139.png" alt="image-20230508215549963"></p>
+<h3 id="6-3-4-重点协议端口号总结（会考）"><a href="#6-3-4-重点协议端口号总结（会考）" class="headerlink" title="6-3.4 重点协议端口号总结（会考）"></a>6-3.4 重点协议端口号总结（会考）</h3><h4 id="6-3-4-1-TCP-x2F-UDP端口号"><a href="#6-3-4-1-TCP-x2F-UDP端口号" class="headerlink" title="6-3.4.1 TCP&#x2F;UDP端口号"></a>6-3.4.1 TCP&#x2F;UDP端口号</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082158450.png" alt="image-20230508215859290"></p>
+<p><strong>源端口随机分配</strong>，目标端口使用知名端口。</p>
+<p>应用客户端使用的源端口一般为系统中未使用的且<strong>大于1024</strong>.</p>
+<p>目的端口号为服务器端应用服务器的进程，如telent为23.</p>
+<p><strong>主流协议（重点要记）</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082202814.png" alt="image-20230508220220485"></p>
+<h4 id="练习题-10"><a href="#练习题-10" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082210082.png" alt="image-20230508221043875"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082211890.png" alt="image-20230508221128730"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082212953.png" alt="image-20230508221210778"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082213799.png" alt="image-20230508221303659"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082213404.png" alt="image-20230508221325235"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305082213327.png" alt="image-20230508221358197"></p>
+<h2 id="6-4-路由协议（也很重要）"><a href="#6-4-路由协议（也很重要）" class="headerlink" title="6-4 路由协议（也很重要）"></a>6-4 路由协议（也很重要）</h2><h3 id="6-4-1-IP路由基础"><a href="#6-4-1-IP路由基础" class="headerlink" title="6-4.1 IP路由基础"></a>6-4.1 IP路由基础</h3><h4 id="6-4-1-1-什么是路由"><a href="#6-4-1-1-什么是路由" class="headerlink" title="6-4.1.1 什么是路由"></a>6-4.1.1 什么是路由</h4><p>当路由器（或其他三层设备）收到一个IP数据包时，会查看数据包的IP头部中的<strong>目的IP地址</strong>，并在路由表中进行查找，在匹配到<strong>最优的路由</strong>后，将数据包扔给该路由所指出接口或者下一跳。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090029638.png" alt="image-20230509002950446"></p>
+<h4 id="6-4-1-2-路由器工作原理"><a href="#6-4-1-2-路由器工作原理" class="headerlink" title="6-4.1.2 路由器工作原理"></a>6-4.1.2 路由器工作原理</h4><p>建立并维护路由表RIB。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090030578.png" alt="image-20230509003053438"></p>
+<p>根据路由表进行数据转发。</p>
+<h4 id="6-4-1-3-查看路由表"><a href="#6-4-1-3-查看路由表" class="headerlink" title="6-4.1.3 查看路由表"></a>6-4.1.3 查看路由表</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090031590.png" alt="image-20230509003154401"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090032427.png" alt="image-20230509003223285"></p>
+<p><strong><code>display ip routing-table</code></strong></p>
+<h3 id="6-4-2-静态路由与默认路由"><a href="#6-4-2-静态路由与默认路由" class="headerlink" title="6-4.2 静态路由与默认路由"></a>6-4.2 静态路由与默认路由</h3><h4 id="6-4-2-1-什么是静态路由"><a href="#6-4-2-1-什么是静态路由" class="headerlink" title="6-4.2.1 什么是静态路由"></a>6-4.2.1 什么是静态路由</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090034776.png" alt="image-20230509003423554"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090035124.png" alt="image-20230509003533957"></p>
+<h4 id="6-4-2-2-静态路由配置"><a href="#6-4-2-2-静态路由配置" class="headerlink" title="6-4.2.2 静态路由配置"></a>6-4.2.2 静态路由配置</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090036153.png" alt="image-20230509003600016"></p>
+<p>示例：<code>ip route-static 192.168.100.0 255.255.255.0 192.168.12.2</code><br><code>ip route-static 192.168.100.0.24 192,168.13.2</code></p>
+<p>实际应用中99%都用的下一跳IP地址</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090038671.png" alt="image-20230509003848523"></p>
+<p>注意通信是双向的，要留意往返流量的路由。</p>
+<h4 id="6-4-2-3-默认路由"><a href="#6-4-2-3-默认路由" class="headerlink" title="6-4.2.3 默认路由"></a>6-4.2.3 默认路由</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090039783.png" alt="image-20230509003948581"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090040881.png" alt="image-20230509004013697"></p>
+<p><code>ip route-static 0.0.0.0 0.0.0.0 192.168.12.2</code>或<code>ip route-static 0.0.0.0 0 192.168.12.2</code></p>
+<h4 id="6-4-2-4-静态路由与默认路由的特点"><a href="#6-4-2-4-静态路由与默认路由的特点" class="headerlink" title="6-4.2.4 静态路由与默认路由的特点"></a>6-4.2.4 静态路由与默认路由的特点</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090042375.png" alt="image-20230509004259119"></p>
+<h3 id="6-4-3-动态路由协议-RIP-x2F-OSPF-x2F-BGP-x2F-ISIS"><a href="#6-4-3-动态路由协议-RIP-x2F-OSPF-x2F-BGP-x2F-ISIS" class="headerlink" title="6-4.3 动态路由协议 RIP&#x2F;OSPF&#x2F;BGP&#x2F;ISIS"></a>6-4.3 动态路由协议 RIP&#x2F;OSPF&#x2F;BGP&#x2F;ISIS</h3><h4 id="6-4-3-1-动态路由协议分类"><a href="#6-4-3-1-动态路由协议分类" class="headerlink" title="6-4.3.1 动态路由协议分类"></a>6-4.3.1 动态路由协议分类</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090044344.png" alt="image-20230509004427183"></p>
+<h4 id="6-4-3-2-RIP协议"><a href="#6-4-3-2-RIP协议" class="headerlink" title="6-4.3.2 RIP协议"></a>6-4.3.2 RIP协议</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090046838.png" alt="image-20230509004646618"></p>
+<p><strong>RIPV1与RIPV2区别</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090048659.png" alt="image-20230509004831500"></p>
+<h4 id="6-4-3-3-距离矢量路由协议"><a href="#6-4-3-3-距离矢量路由协议" class="headerlink" title="6-4.3.3 距离矢量路由协议"></a>6-4.3.3 距离矢量路由协议</h4><p>使用距离矢量路由协议的路由器<strong>并不了解网络的拓扑</strong>，该路由器只知道：</p>
+<p>自身与目的网路之间的<strong>距离</strong>，应该往<strong>哪个方向或哪个接口</strong>转发数据包。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090051174.png" alt="image-20230509005103028"></p>
+<p><strong>特点</strong>：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090052861.png" alt="image-20230509005211695"></p>
+<p><strong>RIP路由度量值</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090052197.png" alt="image-20230509005237999"></p>
+<p>查看RIP路由的度量值：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090053599.png" alt="image-20230509005327404"></p>
+<p><strong>路由优先级</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090053086.png" alt="image-20230509005353877"></p>
+<p><strong>RIP防环机制</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090055500.png" alt="image-20230509005541306"></p>
+<h4 id="6-4-3-4-OSPF（很重要）"><a href="#6-4-3-4-OSPF（很重要）" class="headerlink" title="6-4.3.4 OSPF（很重要）"></a>6-4.3.4 OSPF（很重要）</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090056803.png" alt="image-20230509005617606"></p>
+<p>OSPF不支持自动汇总。</p>
+<p><strong>基本特点</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090058615.png" alt="image-20230509005809384"></p>
+<p><strong>OSPF Cost</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090059987.png" alt="image-20230509005915736"></p>
+<p><strong>OSPF区域概念</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090100480.png" alt="image-20230509010036275"></p>
+<p><strong>OSPF路由器角色</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090101142.png" alt="image-20230509010106940"></p>
+<p><strong>OSPF总结</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090102438.png" alt="image-20230509010227252"></p>
+<h4 id="6-4-3-5-BGP与ISIS"><a href="#6-4-3-5-BGP与ISIS" class="headerlink" title="6-4.3.5 BGP与ISIS"></a>6-4.3.5 BGP与ISIS</h4><p><strong>BGP基础</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090103141.png" alt="image-20230509010355935"></p>
+<p><strong>BGP四个报文</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090104858.png" alt="image-20230509010419710"></p>
+<p><strong>BGP选路规则</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090104047.png" alt="image-20230509010457828"></p>
+<p><strong>ISIS</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090106050.png" alt="image-20230509010609832"></p>
+<p><strong>ISIS区域结构图</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090106119.png" alt="image-20230509010640877"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090106875.png" alt="image-20230509010653625"></p>
+<h4 id="练习题-11"><a href="#练习题-11" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090107992.png" alt="image-20230509010747800"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090108493.png" alt="image-20230509010816324"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090109187.png" alt="image-20230509010910983"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090109170.png" alt="image-20230509010929998"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090112417.png" alt="image-20230509011249211"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090116039.png" alt="image-20230509011657786"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090119112.png" alt="image-20230509011931966"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090121788.png" alt="image-20230509012117575"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305090121938.png" alt="image-20230509012138770"></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.sanjcwn.io/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%83%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-08T17:22:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%83%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网工第七章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%83%E7%AB%A0/">网工第七章</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/06/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%94%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-05T16:43:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/06/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%94%E7%AB%A0/">网工第五章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-04T11:58:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/">网工第四章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-04-30T18:12:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/">网工第二章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/04/30/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%80%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-04-29T16:44:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/04/30/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%80%E7%AB%A0/">网工第一章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -356,8 +680,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

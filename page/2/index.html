@@ -158,6 +158,200 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-XHcms审计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/07/XHcms%E5%AE%A1%E8%AE%A1/">XHcms审计</a>
+    </h1>
+  
+
+        
+        <a href="/2022/11/07/XHcms%E5%AE%A1%E8%AE%A1/" class="archive-article-date">
+  	<time datetime="2022-11-06T16:28:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="0x01-查看目录结构"><a href="#0x01-查看目录结构" class="headerlink" title="0x01 查看目录结构"></a>0x01 查看目录结构</h1><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070035911.png" alt="img"></p>
+<p>admin –管理员文件夹</p>
+<p>css –存放css文件夹</p>
+<p>files –存放页面文件夹</p>
+<p>images –存放图片文件夹</p>
+<p>inc –系统配置文件夹</p>
+<p>install –负责网站安装</p>
+<p>seacmseditor –cms编辑器文件夹</p>
+<p>template –模板文件夹</p>
+<p>upload –上传文件夹</p>
+<p>index.php –网站首页文件</p>
+<h1 id="0x02-Seay扫一扫"><a href="#0x02-Seay扫一扫" class="headerlink" title="0x02 Seay扫一扫"></a>0x02 Seay扫一扫</h1><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070035268.png" alt="img"></p>
+<p>发现34个可疑漏洞，跟着看一看。</p>
+<h1 id="0x03-代码分析"><a href="#0x03-代码分析" class="headerlink" title="0x03 代码分析"></a>0x03 代码分析</h1><h3 id="1-文件包含"><a href="#1-文件包含" class="headerlink" title="1.文件包含"></a>1.文件包含</h3><h4 id="·1-1-x2F-index-php-x2F-admin-x2F-index-php"><a href="#·1-1-x2F-index-php-x2F-admin-x2F-index-php" class="headerlink" title="·1.1  &#x2F;index.php   &#x2F;admin&#x2F;index.php"></a>·1.1  &#x2F;index.php   &#x2F;admin&#x2F;index.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070037517.png" alt="img"></p>
+<p>&#x2F;&#x2F;单一入口模式 ： <strong>用一个文件处理所有的http请求。</strong>例如不管是内容列表页、用户登录页还是内容详细页，都是通过浏览器访问index.php文件来进行处理的，这里这个index.php文件就是这个应用程序的单一入口。</p>
+<p><code>//error_reporting(0); </code>:表示关闭所有php错误报告。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070039149.png" alt="img"></p>
+<p><code>//addslashes() </code>:<code>addalashes()</code>函数是转义函数， 返回在预定义字符之前添加反斜杠的字符串。  预定义字符包括单引号（’）、双引号（”）、反斜杠（\）、NULL </p>
+<p>运用实例：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070039829.png" alt="img"></p>
+<p>只有<code>addslashes（）</code>就直接写个test1.php文件在目录下可以访问</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070039991.png" alt="img"></p>
+<p>也可以通过00截断</p>
+<p>00截断利用条件：1.magic_quotes_gpc &#x3D;off  2.php版本小于5.3.4</p>
+<p> payload：<br>1.<code>？r=../test.txt........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................</code><br>2.<code>?r=../test.txt/././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././ </code></p>
+<h3 id="2-sql注入"><a href="#2-sql注入" class="headerlink" title="2.sql注入"></a>2.sql注入</h3><h4 id="·2-1-x2F-admin-x2F-files-x2F-adset-php"><a href="#·2-1-x2F-admin-x2F-files-x2F-adset-php" class="headerlink" title="·2.1  &#x2F;admin&#x2F;files&#x2F;adset.php"></a>·2.1  &#x2F;admin&#x2F;files&#x2F;adset.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070039441.png" alt="img"></p>
+<p>此处ad1，ad2，ad3都有addslashes转义，并不存在sql注入，属于是误报了</p>
+<h4 id="·2-2-x2F-admin-x2F-files-x2F-editcolumn-php"><a href="#·2-2-x2F-admin-x2F-files-x2F-editcolumn-php" class="headerlink" title="·2.2 &#x2F;admin&#x2F;files&#x2F;editcolumn.php"></a>·2.2 &#x2F;admin&#x2F;files&#x2F;editcolumn.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070040910.png" alt="img"></p>
+<p>id和type都是GET传递进去，单引号闭合，没有其他过滤。就可以登录这个页面进行检测一哈。</p>
+<p>构建payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?r=editcolumn&amp;type=1&amp;id=1&#x27; and updatexml(1,concat(0x7e,(select%20database()),0x7e),1)--+</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070040717.png" alt="img"></p>
+<p>后面就直接按流程来就好了</p>
+<p>来到错误示警处</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070040488.png" alt="img"></p>
+<p>这里的示警其实就是刚刚id和type没有任何过滤方式，只是方法变成了POST</p>
+<h4 id="·2-3-x2F-admin-x2F-files-x2F-editlink-php"><a href="#·2-3-x2F-admin-x2F-files-x2F-editlink-php" class="headerlink" title="·2.3&#x2F;admin&#x2F;files&#x2F;editlink.php"></a>·2.3&#x2F;admin&#x2F;files&#x2F;editlink.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070040800.png" alt="img"></p>
+<p>跟刚刚同样的漏洞方式，对于可控变量不做过滤，直接单引号闭合开始查询更新数据。</p>
+<p>构建payload：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?r=editlink&amp;id=1&#x27; and (extractvalue(1,concat(0x7e,(select database()),0x7e)))--+</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=1&amp;url=1&#x27; and (extractvalue(1,concat(0x7e,(select database()),0x7e))) and&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>这是POST注入方式</p>
+<h4 id="·2-4-x2F-admin-x2F-files-x2F-editsoft-php"><a href="#·2-4-x2F-admin-x2F-files-x2F-editsoft-php" class="headerlink" title="·2.4&#x2F;admin&#x2F;files&#x2F;editsoft.php"></a>·2.4&#x2F;admin&#x2F;files&#x2F;editsoft.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070041369.png" alt="img"></p>
+<p>跟刚刚也是一样的，这里就不在叙述了。</p>
+<h4 id="·2-5-x2F-admin-x2F-fileseditex-php"><a href="#·2-5-x2F-admin-x2F-fileseditex-php" class="headerlink" title="·2.5 &#x2F;admin&#x2F;fileseditex.php"></a>·2.5 &#x2F;admin&#x2F;fileseditex.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070041720.png" alt="img"></p>
+<p>同上</p>
+<h4 id="·2-6-x2F-admin-x2F-files-x2F-imageset-php"><a href="#·2-6-x2F-admin-x2F-files-x2F-imageset-php" class="headerlink" title="·2.6 &#x2F;admin&#x2F;files&#x2F;imageset.php"></a>·2.6 &#x2F;admin&#x2F;files&#x2F;imageset.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070041566.png" alt="img"></p>
+<p>同上</p>
+<h4 id="·2-7-x2F-admin-x2F-files-x2F-manageinfo-php"><a href="#·2-7-x2F-admin-x2F-files-x2F-manageinfo-php" class="headerlink" title="·2.7 &#x2F;admin&#x2F;files&#x2F;manageinfo.php"></a>·2.7 &#x2F;admin&#x2F;files&#x2F;manageinfo.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070041898.png" alt="img"></p>
+<p>同上，post注入</p>
+<h4 id="·2-8-x2F-admin-x2F-files-x2F-newlink-php"><a href="#·2-8-x2F-admin-x2F-files-x2F-newlink-php" class="headerlink" title="·2.8 &#x2F;admin&#x2F;files&#x2F;newlink.php"></a>·2.8 &#x2F;admin&#x2F;files&#x2F;newlink.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070041668.png" alt="img"></p>
+<p>sql语句稍有不同</p>
+<p>payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name=123&amp;url=1&#x27; and (exctractvslue(1,concat(0x7e,(select databse()),0x7e))) and&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="·2-9-x2F-admin-x2F-files-x2F-reply-php"><a href="#·2-9-x2F-admin-x2F-files-x2F-reply-php" class="headerlink" title="·2.9 &#x2F;admin&#x2F;files&#x2F;reply.php"></a>·2.9 &#x2F;admin&#x2F;files&#x2F;reply.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070042059.png" alt="img"></p>
+<p>同上</p>
+<h4 id="·2-10-x2F-admin-x2F-file-x2F-seniorset-php"><a href="#·2-10-x2F-admin-x2F-file-x2F-seniorset-php" class="headerlink" title="·2.10 &#x2F;admin&#x2F;file&#x2F;seniorset.php"></a>·2.10 &#x2F;admin&#x2F;file&#x2F;seniorset.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070042587.png" alt="img"></p>
+<p>同上</p>
+<h4 id="·2-11-x2F-admin-x2F-files-x2F-siteset-php"><a href="#·2-11-x2F-admin-x2F-files-x2F-siteset-php" class="headerlink" title="·2.11 &#x2F;admin&#x2F;files&#x2F;siteset.php"></a>·2.11 &#x2F;admin&#x2F;files&#x2F;siteset.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070042295.png" alt="img"></p>
+<p>同上</p>
+<p>sql注入很多类似。</p>
+<h4 id="·2-12-x2F-files-x2F-content-php"><a href="#·2-12-x2F-files-x2F-content-php" class="headerlink" title="·2.12 &#x2F;files&#x2F;content.php"></a>·2.12 &#x2F;files&#x2F;content.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070042738.png" alt="img"></p>
+<p>id是经过addslashes转义的，但是后面的语句 <code>UPDATE content SET hit = hit+1 WHERE id =$id&quot;</code></p>
+<p>可以看到并没有单引号转义，addslashes无效。</p>
+<p>构建payload：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/index.php/?r=content&amp;cid=1 and updatexml(1,concat(0x7e,(select database()),0x7e),1)  </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="·2-13-x2F-files-x2F-downloads-php"><a href="#·2-13-x2F-files-x2F-downloads-php" class="headerlink" title="·2.13 &#x2F;files&#x2F;downloads.php"></a>·2.13 &#x2F;files&#x2F;downloads.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070043449.png" alt="img"></p>
+<p>同上，无过滤。</p>
+<h4 id="·2-14-x2F-files-x2F-software-php"><a href="#·2-14-x2F-files-x2F-software-php" class="headerlink" title="·2.14 &#x2F;files&#x2F;software.php"></a>·2.14 &#x2F;files&#x2F;software.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070043798.png" alt="img"></p>
+<p>这里其实有addslashes转义，但是，在默认情况下PHP里面magic_quotes_gpc&#x3D;on ，对所有的get、post等数据会自动进行addslashes转义。不能对这个转义过的字符在使用addslashes，会导致二次转义。</p>
+<p>可以使用函数<code>get_magic_quotes_gpc()</code>进行检测</p>
+<p>这里依旧可以构建payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?r=sodtware&amp;cid=1&#x27; or (updatexml(1,concat(0x7e,(select database()),0x7e),1))</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="·2-15-x2F-inc-x2F-db-class-php"><a href="#·2-15-x2F-inc-x2F-db-class-php" class="headerlink" title="·2.15 &#x2F;inc&#x2F;db.class.php"></a>·2.15 &#x2F;inc&#x2F;db.class.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070043863.png" alt="img"></p>
+<p>同上，无过滤</p>
+<h4 id="·2-16-x2F-install-x2F-index-php-重装注入"><a href="#·2-16-x2F-install-x2F-index-php-重装注入" class="headerlink" title="·2.16 &#x2F;install&#x2F;index.php 重装注入"></a>·2.16 &#x2F;install&#x2F;index.php 重装注入</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070043173.png" alt="img"></p>
+<p>user、password变量都没有过滤直接拼入，存在sql注入,需要重装</p>
+<p>构建payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x27; or extractvalue(1,concat(0x7e,(select database()),0x7e))</span><br></pre></td></tr></table></figure>
+
+<p>根据扫描结果，sql注入到此就无了。</p>
+<h3 id="3-文件包含文件读取"><a href="#3-文件包含文件读取" class="headerlink" title="3.文件包含文件读取"></a>3.文件包含文件读取</h3><h4 id="·3-1-x2F-file-x2F-downloads-php"><a href="#·3-1-x2F-file-x2F-downloads-php" class="headerlink" title="·3.1 &#x2F;file&#x2F;downloads.php"></a>·3.1 &#x2F;file&#x2F;downloads.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070043660.png" alt="img"></p>
+<p>fopen()函数用于打开文件</p>
+<p>fseek函数为调节文件指针位置</p>
+<p>fread()函数是输出字节文件</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070043515.png" alt="img"></p>
+<p>跟着查找$sourceFile</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070044274.png" alt="img"></p>
+<p>跟着查找 $fileadd</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070044590.png" alt="img"></p>
+<p>继续$down,并没有发现包含。down来自result（数据库查询结果）</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070044834.png" alt="img"></p>
+<p>result的来源经过addslashes转义</p>
+<h4 id="·3-2-x2F-inc-x2F-db-class-php-任意文件读取"><a href="#·3-2-x2F-inc-x2F-db-class-php-任意文件读取" class="headerlink" title="·3.2 &#x2F;inc&#x2F;db.class.php 任意文件读取"></a>·3.2 &#x2F;inc&#x2F;db.class.php 任意文件读取</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070044735.png" alt="img"></p>
+<p><code>$f = fopen($sqlfile,&quot;rb&quot;);</code></p>
+<p><code>$line = fgets($f)</code></p>
+<p>跟着变量$f，追踪到$fp，最后发现都是不可控的，误报。</p>
+<h3 id="4-xss"><a href="#4-xss" class="headerlink" title="4.xss"></a>4.xss</h3><h4 id="·4-1-x2F-seacmseditor-x2F-php-x2F-controller-php"><a href="#·4-1-x2F-seacmseditor-x2F-php-x2F-controller-php" class="headerlink" title="·4.1&#x2F;seacmseditor&#x2F;php&#x2F;controller.php"></a>·4.1&#x2F;seacmseditor&#x2F;php&#x2F;controller.php</h4><p>Seay爆出可能存在XSS，</p>
+<p>前台可以直接爆。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070044377.png" alt="img"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/28953651/1661246369031-2b5df8b5-124e-43e5-989a-1590d76c551c.png" alt="img"></p>
+<p>存在可控变量<code>$_GET[&quot;callback&quot;]</code>和<code>$resultcallback</code>这里存在正则匹配和<code>htmlspecialchars（）</code>函数防xss，这个可控变量没有利用方法</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070045292.png" alt="img"></p>
+<p>result的话也是被死死限定了。根据wp，再仔细看一看代码，$ad1-3经过addslashes转义进入页面</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070045735.png" alt="img"></p>
+<p>但是addslashes是对sql进行限制，对xss几乎没有限制</p>
+<p>可以在前端直接输入xss：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070045766.png" alt="img"></p>
+<p>还有存储型xss，利用post传参，直接根据数据库进行交互，存在存储型xss。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070047095.png" alt="img"></p>
+<p>.&#x2F;admin&#x2F;files&#x2F;manageinfo.php存储型xss</p>
+<p>payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;D:\Myblog\source\_posts\1&quot; onerror=alert(/xss/)&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070047062.png" alt="img"></p>
+<h3 id="5-CSRF"><a href="#5-CSRF" class="headerlink" title="5.CSRF"></a>5.CSRF</h3><h4 id="·5-1-x2F-admin-x2F-files-x2F-linklist-php"><a href="#·5-1-x2F-admin-x2F-files-x2F-linklist-php" class="headerlink" title="·5.1 &#x2F;admin&#x2F;files&#x2F;linklist.php"></a>·5.1 &#x2F;admin&#x2F;files&#x2F;linklist.php</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070047052.png" alt="img"></p>
+<p>点击删除抓包，利用burp生成poc</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070047465.png" alt="img"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202211070047217.png" alt="img"></p>
+<p>成功执行</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/07/XHcms%E5%AE%A1%E8%AE%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-My-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

@@ -158,6 +158,329 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-网工第四章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/">网工第四章</a>
+    </h1>
+  
+
+        
+        <a href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2023-05-04T11:58:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第四章-局域网和城域网（很重要）"><a href="#第四章-局域网和城域网（很重要）" class="headerlink" title="第四章 局域网和城域网（很重要）"></a>第四章 局域网和城域网（很重要）</h1><h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030013209.png" alt="image-20230503001348946"></p>
+<h2 id="4-1-局域网基础"><a href="#4-1-局域网基础" class="headerlink" title="4-1 局域网基础"></a>4-1 局域网基础</h2><h3 id="4-1-1-局域网与城域网体系架构-IEEE"><a href="#4-1-1-局域网与城域网体系架构-IEEE" class="headerlink" title="4-1.1 局域网与城域网体系架构 IEEE"></a>4-1.1 局域网与城域网体系架构 IEEE</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030017109.png" alt="image-20230503001713920"></p>
+<p>应用最广的就是802.3和802.11。</p>
+<h3 id="4-1-2-局域网拓扑结构"><a href="#4-1-2-局域网拓扑结构" class="headerlink" title="4-1.2 局域网拓扑结构"></a>4-1.2 局域网拓扑结构</h3><p>​	局域网的主要特征由网络的拓扑结构、所采用的协议类型，以及介质访问控制方法决定。</p>
+<p>​	局域网的拓扑结构是指连接网络设备的传输介质的铺设形式，局域网的拓扑结构主要由<strong>星型、总线型、环型和混合型。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030022435.png" alt="image-20230503002214283"></p>
+<h2 id="4-2-CSMA-x2F-CD"><a href="#4-2-CSMA-x2F-CD" class="headerlink" title="4-2 CSMA&#x2F;CD"></a>4-2 CSMA&#x2F;CD</h2><p>​	对总线型、星型和树型拓扑访问控制是CSMA&#x2F;CD（载波侦听多路访问&#x2F;冲突检测）</p>
+<p>​	基本原理：发送数据前，先监听信道上是否有人在发送，若有，说明信道正忙，否则则说明信道是空闲的，然后根据<strong>预定的策略</strong>决定：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030025590.png" alt="image-20230503002515446"></p>
+<h3 id="4-2-1-CSMA-x2F-CD三种监听算法"><a href="#4-2-1-CSMA-x2F-CD三种监听算法" class="headerlink" title="4-2.1 CSMA&#x2F;CD三种监听算法"></a>4-2.1 CSMA&#x2F;CD三种监听算法</h3><p>1.非坚持型监听算法：后退随机时间</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030027517.png" alt="image-20230503002715375"></p>
+<p>2.1-坚待型监听算法：继续监听，不等待</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030027588.png" alt="image-20230503002723461"></p>
+<p>3.P-坚持型监听算法</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030027724.png" alt="image-20230503002736604"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030027994.png" alt="image-20230503002751833"></p>
+<h4 id="练习题："><a href="#练习题：" class="headerlink" title="练习题："></a>练习题：</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030028141.png" alt="image-20230503002842990"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030029306.png" alt="image-20230503002956138"></p>
+<h3 id="4-2-2-冲突检测原理"><a href="#4-2-2-冲突检测原理" class="headerlink" title="4-2.2 冲突检测原理"></a>4-2.2 冲突检测原理</h3><p>​	载波监听<strong>只能减小冲突的概率，不能完全避免冲突</strong>。当两个帧发生冲突后，若继续发送将会浪费网络带宽。为了改进带宽利用率，发送站应采用边发边听的冲突检测方法，即：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030032703.png" alt="image-20230503003259539"></p>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030035439.png" alt="image-20230503003532306"></p>
+<h2 id="4-3-二进制指数退避算法"><a href="#4-3-二进制指数退避算法" class="headerlink" title="4-3 二进制指数退避算法"></a>4-3 二进制指数退避算法</h2><h3 id="4-3-1二进制指数退避方法工作原理"><a href="#4-3-1二进制指数退避方法工作原理" class="headerlink" title="4-3.1二进制指数退避方法工作原理"></a>4-3.1二进制指数退避方法工作原理</h3><p>原理：1.检测到冲突后，马上停止发送数据，并等待随机时间在发送数据</p>
+<p>2.<img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030037278.png" alt="image-20230503003706125"></p>
+<p>如果重传16次后，认为网络繁忙或故障，不在尝试发送。</p>
+<h4 id="练习题：-1"><a href="#练习题：-1" class="headerlink" title="练习题："></a>练习题：</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030040687.png" alt="image-20230503004037502"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030041080.png" alt="image-20230503004111818"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030044817.png" alt="image-20230503004419672"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030045585.png" alt="image-20230503004536415"></p>
+<h2 id="4-4-最小帧长计算"><a href="#4-4-最小帧长计算" class="headerlink" title="4-4 最小帧长计算"></a>4-4 最小帧长计算</h2><h3 id="4-4-1-最小帧长计算"><a href="#4-4-1-最小帧长计算" class="headerlink" title="4-4.1 最小帧长计算"></a>4-4.1 最小帧长计算</h3><p><strong>公式：Lmin &#x3D; 2R * d&#x2F;v</strong></p>
+<p>R为网络数据速率，d为最大距离，v为传播速度</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030047092.png" alt="image-20230503004741947"></p>
+<p>不冲突条件：<strong>发送时间&gt;&#x3D; 传送时间+确认时间</strong></p>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030051135.png" alt="image-20230503005104980"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305030054970.png" alt="image-20230503005417826"></p>
+<h2 id="4-5-以太网帧结构和物理层标准"><a href="#4-5-以太网帧结构和物理层标准" class="headerlink" title="4-5 以太网帧结构和物理层标准"></a>4-5 以太网帧结构和物理层标准</h2><h3 id="4-5-1-以太网帧结构"><a href="#4-5-1-以太网帧结构" class="headerlink" title="4-5.1 以太网帧结构"></a>4-5.1 以太网帧结构</h3><p>​	前面7+1字节用于时钟同步，不算入帧长。数据46-1500字节，不够至少填充到46字节。校验位4字节，CRC循环冗余校验32位。</p>
+<p>最小帧长<strong>64字节</strong>：6+6+2+46+4&#x3D;64</p>
+<p>最大帧长<strong>1518字节</strong>：6+6+2+1500+4&#x3D;1518</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041605325.png" alt="image-20230504160550165"></p>
+<h3 id="4-5-2-以太网报文封装"><a href="#4-5-2-以太网报文封装" class="headerlink" title="4-5.2 以太网报文封装"></a>4-5.2 以太网报文封装</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041612975.png" alt="image-20230504161255826"></p>
+<h4 id="练习题-2"><a href="#练习题-2" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041615997.png" alt="image-20230504161506850"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041616110.png" alt="image-20230504161559958"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041616718.png" alt="image-20230504161640555"></p>
+<h3 id="4-5-3-802-3以太网（10M）"><a href="#4-5-3-802-3以太网（10M）" class="headerlink" title="4-5.3 802.3以太网（10M）"></a>4-5.3 802.3以太网（10M）</h3><p>物理介质命名规范 ： <strong>&lt;传输速率Mbps&gt;&lt;信号方式&gt;&lt;最大传输速率（百米）或介质类型&gt;</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041618034.png" alt="image-20230504161853859"></p>
+<h3 id="4-5-4-快速以太网802-3u（100M）"><a href="#4-5-4-快速以太网802-3u（100M）" class="headerlink" title="4-5.4 快速以太网802.3u（100M）"></a>4-5.4 快速以太网802.3u（100M）</h3><p>​	快速以太网是历年考试重点，需要掌握几种标准的传输介质（<strong>使用2对还是4对，采用屏蔽线还是非屏蔽线。</strong>UTP为非屏蔽双绞线，STP为屏蔽双绞线）。其中，100-Base-TX采用4B&#x2F;5B编码。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041621629.png" alt="image-20230504162135467"></p>
+<h4 id="练习题-3"><a href="#练习题-3" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041622714.png" alt="image-20230504162216557"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041622559.png" alt="image-20230504162242401"></p>
+<h3 id="4-5-5-千兆以太网（1000M）"><a href="#4-5-5-千兆以太网（1000M）" class="headerlink" title="4-5.5 千兆以太网（1000M）"></a>4-5.5 千兆以太网（1000M）</h3><p>千兆以太网两个标准<strong>802.3z和802.3ab</strong>（1000BASE-T），千兆需要四对双绞线，达到100米传输。</p>
+<p>1000BASE-LX标准可以使用<strong>单模和多模光纤</strong>传输。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041625844.png" alt="image-20230504162532686"></p>
+<h4 id="练习题-4"><a href="#练习题-4" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041628963.png" alt="image-20230504162813833"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041629613.png" alt="image-20230504162909441"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041630219.png" alt="image-20230504163019918"></p>
+<h3 id="4-5-6-万兆以太网802-3ae（10G）"><a href="#4-5-6-万兆以太网802-3ae（10G）" class="headerlink" title="4-5.6 万兆以太网802.3ae（10G）"></a>4-5.6 万兆以太网802.3ae（10G）</h3><p>万兆以太网标准：IEEE802ae，支持10G速率，可用光纤或双绞线传输</p>
+<p>万兆以太网基本应用于点到点线路，不再共享带宽，没有冲突检测，载波监听和多路访问技术也不再重要。万兆以太网和传统以太网采用同样的帧结构。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041633218.png" alt="image-20230504163340919"></p>
+<h4 id="练习题-5"><a href="#练习题-5" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041634678.png" alt="image-20230504163428399"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041634193.png" alt="image-20230504163438937"></p>
+<h2 id="4-6-虚拟局域网VLAN"><a href="#4-6-虚拟局域网VLAN" class="headerlink" title="4-6 虚拟局域网VLAN"></a>4-6 虚拟局域网VLAN</h2><h3 id="4-6-1-VLAN基础"><a href="#4-6-1-VLAN基础" class="headerlink" title="4-6.1 VLAN基础"></a>4-6.1 VLAN基础</h3><p>虚拟局域网（VLAN）：</p>
+<p>根据管理功能、组织机构或应用类型对交换局域网进行分段而形成的<strong>逻辑网络</strong>。</p>
+<p>不同VLAN通信必须经过三层设备：<strong>路由器</strong>、三层交换机、防火墙等。</p>
+<p>虚拟局域网工作站可以不属于同一物理网段。任何交换端口都可以分配给某个VLAN，属于同一VLAN的所有端口构成一个广播域。</p>
+<p>冲突域和广播域：<strong>一个中继器和集线器是一个冲突域，一个VLAN为一个广播域，交换机的一个接口为一个冲突域</strong>。</p>
+<h3 id="4-6-2-冲突域"><a href="#4-6-2-冲突域" class="headerlink" title="4-6.2 冲突域"></a>4-6.2 冲突域</h3><p>​	冲突域是指连接在同一共享介质的所有节点的集合，<strong>冲突域内所有节点竞争同一带宽，一个节点发出的报文</strong>，其余节点都可以收到。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041641877.png" alt="image-20230504164143558"></p>
+<h3 id="4-6-3-广播域"><a href="#4-6-3-广播域" class="headerlink" title="4-6.3 广播域"></a>4-6.3 广播域</h3><p>广播报文所能到的整个访问范围称为二层广播域，简称广播域<strong>，同一广播域内的主机都能说到广播。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041644000.png" alt="image-20230504164427691"></p>
+<h4 id="练习题-6"><a href="#练习题-6" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041647056.png" alt="image-20230504164736790"></p>
+<h3 id="4-6-4-交换机VLAN划分"><a href="#4-6-4-交换机VLAN划分" class="headerlink" title="4-6.4 交换机VLAN划分"></a>4-6.4 交换机VLAN划分</h3><p>静态划分VLAN：<strong>基于交换机端口</strong></p>
+<p>动态划分VLAN：<strong>基于MAC地址、基于策略、基于网络层协议、基于网络层地址</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041649706.png" alt="image-20230504164921482"></p>
+<h3 id="4-6-5-VLAN划分配置"><a href="#4-6-5-VLAN划分配置" class="headerlink" title="4-6.5 VLAN划分配置"></a>4-6.5 VLAN划分配置</h3><p>1.静态划分VLAN。手动把交换机的某些接口加入到某个VLAN中，配置如下：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041651348.png" alt="image-20230504165134182"></p>
+<p>2.动态划分VLAN。根据MAC地址、网络层地址、网络层协议、IP广播域或管理策略划分。</p>
+<p>1）基于MAC地址进行VLAN划分配置</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041653129.png" alt="image-20230504165300959"></p>
+<p>2）基于策略进行VLAN划分配置</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041653068.png" alt="image-20230504165327888"></p>
+<h3 id="4-6-6-VLAN作用"><a href="#4-6-6-VLAN作用" class="headerlink" title="4-6.6 VLAN作用"></a>4-6.6 VLAN作用</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041656665.png" alt="image-20230504165615399"></p>
+<h3 id="4-6-7-802-1Q标签"><a href="#4-6-7-802-1Q标签" class="headerlink" title="4-6.7 802.1Q标签"></a>4-6.7 802.1Q标签</h3><p>802.1Q标签字段，重点掌握PRI和VID</p>
+<p>PRI(3位)：priority表示优先级，提供0-7共8个优先级，当有多个帧等待发送时，按优先级顺序发送数据包。</p>
+<p>VID（12位）：即VLAN标识符，最多可以表示2的12次方等于4096个VLAN，其中VID0用于识别优先级，VID4095保留未用，<strong>所以最多可以配置4094个VLAN。默认管理VLAN是1，不能删除。</strong></p>
+<p>​	<strong>交换机添加或删除VLAN标签的过程由专用硬件自动实现，处理速度很快，不会引入太大的延迟。</strong></p>
+<p>​	从用户角度看，数据源产生的标准的以太帧，目的接收的也是标准的以太帧，<strong>VLAN标记对用户是透明的。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041706802.png" alt="image-20230504170657581"></p>
+<h3 id="4-6-8-交换机端口类型"><a href="#4-6-8-交换机端口类型" class="headerlink" title="4-6.8 交换机端口类型"></a>4-6.8 交换机端口类型</h3><p><strong>Access接口</strong>：只能传送单个VLAN数据，一般用于连接PC&#x2F;摄像头等终端。</p>
+<p><strong>Trunk接口</strong>：能传送多个VLAN数据，一般用于交换机互联。</p>
+<p>Hybrid接口：混合接口，包含access和trunk属性</p>
+<p>QinQ：双层标签，一般用于运营商城域网。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041713738.png" alt="image-20230504171350530"></p>
+<h4 id="练习题-7"><a href="#练习题-7" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041716330.png" alt="image-20230504171655149"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041717898.png" alt="image-20230504171756681"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041719198.png" alt="image-20230504171945069"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041723026.png" alt="image-20230504172352844"></p>
+<h2 id="4-7-生成树协议"><a href="#4-7-生成树协议" class="headerlink" title="4-7 生成树协议"></a>4-7 生成树协议</h2><h3 id="4-7-1-生成树背景"><a href="#4-7-1-生成树背景" class="headerlink" title="4-7.1 生成树背景"></a>4-7.1 生成树背景</h3><p>交换机单链路上行，存在<strong>单点故障</strong>，线路和设备都不具备冗余性。</p>
+<p>任何一条<strong>链路或设备故障</strong>，网络将面临<strong>断网</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041856519.png" alt="image-20230504185603382"></p>
+<p>为了解决这个问题，往往会采取解决冗余的问题。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041857782.png" alt="image-20230504185719620"></p>
+<p>但是会带来二层环路问题–<strong>广播风暴</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041857364.png" alt="image-20230504185747209"></p>
+<p>广播风暴对网络危害特别大，将严重消耗设备CPU资源及网络带宽。</p>
+<p>​		–<strong>MAC表震荡</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041859098.png" alt="image-20230504185921902"></p>
+<p>存在广播风暴，PC会在1口和2口反复震荡。</p>
+<p>实操解决：关闭交换机的接口。</p>
+<p><strong>采用生成树（Spanning-tree）技术</strong>，能够在网络中存在二层环路时，通过<strong>逻辑阻塞（Block）</strong>特定端口，从而打破环路，并且在网络出现啊你拓扑变更时及时收敛<strong>，保障网络冗余性。</strong></p>
+<p> <img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041911454.png" alt="image-20230504191136330"></p>
+<p>在网络出现拓扑变更时及时收敛，<strong>保障网络冗余性。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041912067.png" alt="image-20230504191216864"></p>
+<h3 id="4-7-2-网桥ID"><a href="#4-7-2-网桥ID" class="headerlink" title="4-7.2 网桥ID"></a>4-7.2 网桥ID</h3><p>桥ID一共八个字节，由2个字节优先级和6个字节的MAC地址构成。越小越优先。</p>
+<p>桥优先级默认位32768，可以手动修改。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041914994.png" alt="image-20230504191400832"></p>
+<h3 id="4-7-3-路径开销"><a href="#4-7-3-路径开销" class="headerlink" title="4-7.3 路径开销"></a>4-7.3 路径开销</h3><p>路径开销时一个端口量，是STP&#x2F;RSTP协议用于选择链路的参考值。</p>
+<p>端口路径开销的默认值及取值范围由选定的路径开销算法决定，<strong>路径开销与端口带宽成反比</strong>。</p>
+<p>华为设备路径开销标准由：802.1d-1998，802.1t及私有的legacy，默认位802.1t标准。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041917687.png" alt="image-20230504191712474"></p>
+<h3 id="4-7-4-STP选举操作（-重点）"><a href="#4-7-4-STP选举操作（-重点）" class="headerlink" title="4-7.4 STP选举操作（*重点）"></a>4-7.4 STP选举操作（*重点）</h3><p>1.确定一个根桥（Root Bridge）（<strong>选优先级和MAC地址最小的网桥</strong>）</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041923344.png" alt="image-20230504192327213"></p>
+<p>2.确定其他网桥的根端口（Root Port）（<strong>非根桥的端口到根桥最近的端口</strong>）</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041924753.png" alt="image-20230504192447615"></p>
+<p>3.每个段选择一个指定端口（Designated Port）（先选指定桥，指定桥上为指定端口）</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041926097.png" alt="image-20230504192606947"></p>
+<p>常用方法：先选指定桥，指定桥跟的接口就是指定接口。或者从中间看哪个更近。</p>
+<p>4.选出非指定端口（NonDesignated Port）</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041922505.png" alt="image-20230504192201371"></p>
+<h3 id="4-7-5-STP案例分析"><a href="#4-7-5-STP案例分析" class="headerlink" title="4-7.5 STP案例分析"></a>4-7.5 STP案例分析</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041934648.png" alt="image-20230504193448490"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041936786.png" alt="image-20230504193644622"></p>
+<h3 id="4-7-6-几种生成树协议"><a href="#4-7-6-几种生成树协议" class="headerlink" title="4-7.6 几种生成树协议"></a>4-7.6 几种生成树协议</h3><p>生成树协议：802.1d STP（<strong>慢，拓扑收敛需要30-50s</strong>）</p>
+<p>快速生成树协议802.1w RSTP（<strong>快，6s内完成收敛</strong>）</p>
+<p>多生成数协议802.1s MSTP （实现多个VLAN<strong>负载均衡</strong>）</p>
+<h4 id="练习题-8"><a href="#练习题-8" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041942572.png" alt="image-20230504194215356"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041942384.png" alt="image-20230504194255216"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041945551.png" alt="image-20230504194547294"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041946887.png" alt="image-20230504194643681"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041947872.png" alt="image-20230504194701699"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041947694.png" alt="image-20230504194722516"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041948154.png" alt="image-20230504194830957"></p>
+<h2 id="4-8-城域网基础"><a href="#4-8-城域网基础" class="headerlink" title="4-8 城域网基础"></a>4-8 城域网基础</h2><h3 id="4-8-1-城域网"><a href="#4-8-1-城域网" class="headerlink" title="4-8.1 城域网"></a>4-8.1 城域网</h3><p>​	1.E-LAN技术是802.1Q的VLAN帧标记，双层标记，<strong>打了两层VLAN标签</strong>，这种技术被定义为I<strong>EEE802.1ad</strong>，也成为<strong>QinQ技术</strong>。</p>
+<p>QinQ实际是把<strong>用户VLAN</strong>嵌套在<strong>运营商城域以太网VLAN</strong>中传送。</p>
+<p>​	2.IEEE802.1ah，也称为PBB，也叫<strong>MAC-IN-MAC技术</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041952625.png" alt="image-20230504195250445"></p>
+<h4 id="练习题-9"><a href="#练习题-9" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041954467.png" alt="image-20230504195457270"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041955417.png" alt="image-20230504195522256"></p>
+<h2 id="章节总结"><a href="#章节总结" class="headerlink" title="章节总结"></a>章节总结</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305041956552.png" alt="image-20230504195609397"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/05/04/%E7%BD%91%E5%B7%A5%E7%AC%AC%E5%9B%9B%E7%AB%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-网工第三章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%89%E7%AB%A0/">网工第三章</a>
+    </h1>
+  
+
+        
+        <a href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%89%E7%AB%A0/" class="archive-article-date">
+  	<time datetime="2023-05-01T04:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第三章-广域通信网"><a href="#第三章-广域通信网" class="headerlink" title="第三章 广域通信网"></a>第三章 广域通信网</h1><h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305010211993.png" alt="image-20230501021130778"></p>
+<h2 id="3-1-广域网物理特性"><a href="#3-1-广域网物理特性" class="headerlink" title="3-1 广域网物理特性"></a>3-1 广域网物理特性</h2><p>需要了解和记忆</p>
+<h3 id="3-1-1-公共交换电话网-PSTN"><a href="#3-1-1-公共交换电话网-PSTN" class="headerlink" title="3-1.1 公共交换电话网 PSTN"></a>3-1.1 公共交换电话网 PSTN</h3><p>在公共交换电话网（PSTN）是为了<strong>语音通信而建立</strong>的网络，从20世纪69年代开始又被<strong>用于数据传输</strong>。 </p>
+<p>电话网由3个部分组成：<strong>本地回路、干线和交换机</strong>。</p>
+<p>干线和交换机一般采用数字传输和交换技术，而<strong>本地回路基本采用模拟线路</strong>。</p>
+<p>电话线联网是需要在发送端通过调制解调器把数字信号变换为模拟信号，接收端再通过调制解调器把模拟信号变换为数字信号。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011109377.png" alt="image-20230501110931188"></p>
+<p><strong>建议：平时学的时候用自己语言描述出来。</strong></p>
+<p><strong>本地回路</strong>：</p>
+<p>DTE：<strong>数据终端设备</strong>，这种设备代表通信链路的端点。</p>
+<p>DCE：<strong>数据电路设备</strong>，用于信号变换器、自动呼叫等。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011113716.png" alt="image-20230501111319489"></p>
+<h3 id="3-1-2-机械特性"><a href="#3-1-2-机械特性" class="headerlink" title="3-1.2 机械特性"></a>3-1.2 机械特性</h3><p>机械特性描述DTE和DCE之间物理上的分界线，规定连机器的<strong>几何形状、尺寸大小、引线数、引线排列方式及锁定装置</strong>等。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011115125.png" alt="image-20230501111537819"></p>
+<h3 id="3-1-3-电气特性"><a href="#3-1-3-电气特性" class="headerlink" title="3-1.3 电气特性"></a>3-1.3 电气特性</h3><p>RS-232-C采用的<strong>V.28标准电路</strong>，速率是<strong>20kb&#x2F;s</strong>，最长<strong>15米</strong>。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011120566.png" alt="image-20230501112040388"></p>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011122794.png" alt="image-20230501112211570"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011123478.png" alt="image-20230501112317372"></p>
+<h2 id="3-2-流量与差错控制"><a href="#3-2-流量与差错控制" class="headerlink" title="3-2 流量与差错控制"></a>3-2 流量与差错控制</h2><h3 id="3-2-1-流量控制与差错控制概念"><a href="#3-2-1-流量控制与差错控制概念" class="headerlink" title="3-2.1 流量控制与差错控制概念"></a>3-2.1 流量控制与差错控制概念</h3><p>流量控制：协调发送站和接收站工作步调，避免发送速度过快，接收站处理不过来。</p>
+<p>差错控制：检测和纠正传输错误的机制。</p>
+<h3 id="3-2-2-流量控制–停等协议"><a href="#3-2-2-流量控制–停等协议" class="headerlink" title="3-2.2 流量控制–停等协议"></a>3-2.2 流量控制–停等协议</h3><p>工作原理：发送站发一帧，收到应答信号后再发送下一帧，接收站每收到一帧后回送一个应答信号（ACK），表示愿意接受下一帧，如果接收站不应答，发送站必须等待。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011130367.png" alt="image-20230501113009132"></p>
+<h3 id="3-2-3-流量控制–滑动窗口等待协议"><a href="#3-2-3-流量控制–滑动窗口等待协议" class="headerlink" title="3-2.3 流量控制–滑动窗口等待协议"></a>3-2.3 流量控制–滑动窗口等待协议</h3><p>主要思想：<strong>允许连续发送多个帧而无须等待应答。</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011132184.png" alt="image-20230501113230010"></p>
+<h3 id="3-2-4-差错控制"><a href="#3-2-4-差错控制" class="headerlink" title="3-2.4 差错控制"></a>3-2.4 差错控制</h3><p><strong>应对差错的方法</strong>：</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011134544.png" alt="image-20230501113421287"></p>
+<p>绝大部分场景使用超时重传</p>
+<h3 id="3-2-5-差错控制–停等ARQ协议"><a href="#3-2-5-差错控制–停等ARQ协议" class="headerlink" title="3-2.5 差错控制–停等ARQ协议"></a>3-2.5 差错控制–停等ARQ协议</h3><p>停等ARQ协议是<strong>停等流控技术</strong>和<strong>自动请求重发技术</strong>的结合。</p>
+<p>发送站发出一帧后必须等待应答信号<strong>，收到肯定应答信号ACK后继续发送下一帧；收到否定应答信号NAK后重发该帧</strong>，若在一定时间内没有收到应答信号也必须重发。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011138438.png" alt="image-20230501113826220"></p>
+<h3 id="3-2-6-差错控制–选择重发ARQ协议与后退N帧ARQ协议"><a href="#3-2-6-差错控制–选择重发ARQ协议与后退N帧ARQ协议" class="headerlink" title="3-2.6 差错控制–选择重发ARQ协议与后退N帧ARQ协议"></a>3-2.6 差错控制–选择重发ARQ协议与后退N帧ARQ协议</h3><p>选择重发ARQ：重传特定的某一帧，<strong>W发&#x3D;W收&lt;&#x3D; 2的k-1次方</strong></p>
+<p>后退N帧ARQ：重传此帧和后续的N帧，<strong>W发&#x3D;W收&lt;&#x3D; 2的k次方-1</strong></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011145834.png" alt="image-20230501114531531"></p>
+<h4 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011147200.png" alt="image-20230501114727042"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011150582.png" alt="image-20230501115001400"></p>
+<h2 id="3-3-帧中继与HDLC（HDLC是历年的高频考点）"><a href="#3-3-帧中继与HDLC（HDLC是历年的高频考点）" class="headerlink" title="3-3 帧中继与HDLC（HDLC是历年的高频考点）"></a>3-3 帧中继与HDLC（HDLC是历年的高频考点）</h2><h3 id="3-3-1-帧中继-FR（Frame-Rlay）"><a href="#3-3-1-帧中继-FR（Frame-Rlay）" class="headerlink" title="3-3.1 帧中继 FR（Frame Rlay）"></a>3-3.1 帧中继 FR（Frame Rlay）</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011151213.png" alt="image-20230501115120008"></p>
+<h4 id="练习题-2"><a href="#练习题-2" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011155146.png" alt="image-20230501115525009"></p>
+<h3 id="3-3-2-ISDN和ATM"><a href="#3-3-2-ISDN和ATM" class="headerlink" title="3-3.2  ISDN和ATM"></a>3-3.2  ISDN和ATM</h3><p>ISDN综合数字业务网，目的是以数字系统代替电话系统，把<strong>音频、视频、数据业务</strong>放在一个网上统一传输。</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011156313.png" alt="image-20230501115655164"></p>
+<h4 id="练习题-3"><a href="#练习题-3" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011157441.png" alt="image-20230501115746308"></p>
+<h3 id="3-3-3-HDLC（高级数据链路控制）"><a href="#3-3-3-HDLC（高级数据链路控制）" class="headerlink" title="3-3.3 HDLC（高级数据链路控制）"></a>3-3.3 HDLC（高级数据链路控制）</h3><p>HDLC是一种<strong>面向位（比特）的链路控制协议</strong></p>
+<p>通常使用CRC-16,CRC-32校验，帧边界“<strong>01111110</strong>”</p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011159791.png" alt="image-20230501115944655"></p>
+<h3 id="3-3-4-HDLC帧格式及控制字段（核心考点）"><a href="#3-3-4-HDLC帧格式及控制字段（核心考点）" class="headerlink" title="3-3.4 HDLC帧格式及控制字段（核心考点）"></a>3-3.4 HDLC帧格式及控制字段（核心考点）</h3><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011202574.png" alt="image-20230501120243447"></p>
+<p><strong>信息帧（I帧）</strong>：第一位为0，用于承载<strong>数据和控制</strong>。</p>
+<p>N(S)表示发送帧序号，N(R)表示下一个预期要接收帧的序号，N(R)&#x3D;5，表示下一帧要接收五号帧。N(S)和N(R)均为三位二进制编码，可取值0~7。</p>
+<p><strong>监控帧（S帧）</strong>：前两位为10，监控则很难用于差错控制和流量控制。</p>
+<p>S帧控制字段的第三、四位位S帧类型编码，共有四种不同编码，含义如上表所示。</p>
+<p><strong>无编号帧（U帧）</strong>：控制字段中不包含编号N(S)和N(R)，U帧用于提供对链路的建立、拆除以及多种控制功能，但是当要求提供不可靠的无连接服务是，它有时<strong>也可以承载数据。</strong></p>
+<h4 id="练习题-4"><a href="#练习题-4" class="headerlink" title="练习题"></a>练习题</h4><p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011213827.png" alt="image-20230501121316655"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011214397.png" alt="image-20230501121409252"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011216117.png" alt="image-20230501121630936"></p>
+<p><img src="https://sanj-1313479604.cos.ap-nanjing.myqcloud.com/image/202305011216086.png" alt="image-20230501121657928"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/05/01/%E7%BD%91%E5%B7%A5%E7%AC%AC%E4%B8%89%E7%AB%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-网工第二章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
